@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./_css/onepagetab.css">
+    <script src="./_js/bootstrap.bundle.js"></script>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        @media (max-width: 730px) {
+            strong {
+                font-size: 30px !important;
+            }
+        }
+
+        .backgroundbadminton {
+            background-image: url(./img/bg_home_screen.jpg);
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /*為了要比sticky的z-index1020高*/
+        .dropdown-menu.show {
+            z-index: 1021;
+        }
+
+        strong {
+            font-size: 60px;
+        }
+
+        /*為了比sticky的1020高*/
+    </style>
+</head>
+
+<body>
+    <header class="py-0 bg-light border-bottom w-100">
+        <div class="row  w-100">
+            <div class="col-lg-10">
+                <ul class="nav me-auto d-none d-lg-flex justify-content-center">
+                    <li class="nav-item"><a href="https://bwfbadminton.com/" class="nav-link link-dark px-2 active"
+                            aria-current="page">BWF Fan
+                            Zone</a>
+                    </li>
+                    <li class="nav-item"><a href="https://bwfworldtour.bwfbadminton.com/"
+                            class="nav-link link-dark px-2">HSBC BWF World
+                            Tour</a></li>
+                    <li class="nav-item"><a href="https://bwfworldtourfinals.bwfbadminton.com/"
+                            class="nav-link link-dark px-2">HSBC BWF
+                            World
+                            Tour Finals</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">more</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="https://bwfsudirmancup.bwfbadminton.com/">TotalEnergies
+                                    BWF Sudirman
+                                    Cup
+                                    Finals</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://bwfthomasubercups.bwfbadminton.com/">TotalEnergies BWF Thomas &
+                                    Uber
+                                    Cup Finals</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://olympics.bwfbadminton.com/">Paris 2024
+                                    Olympics</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 px-3 ">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item "><a href="./login.html" class="nav-link link-dark px-2">Login</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 紅色區域 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top w-100" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a href=" ./bs5homepage.html">
+                <img style="height: 55px; box-shadow: 5px 1px 1px rgba(0, 0, 0, 0.316);  
+                            border:1px solid rgba(0, 0, 0, 0.601); background-color:white;" src="./img/logo-wt.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-3" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./news.html">新聞</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./bs5ranking.html" class="nav-link ">世界排名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./calendar.html" class="nav-link ">賽事</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">媒體</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-facebook"> Facebook</span></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-twitter-x"> X</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-instagram">
+                                        Instagram</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <!-- 首頁大圖 -->
+    <section>
+        <div id="titleimg" class="w-100">
+            <img class="w-100" src="./img/World_Tour_Website_Placeholder.jpg">
+        </div>
+    </section>
+    <!-- 新聞 -->
+    <section class="mt-3">
+        <div class="container-fluid w-100" id="news_title">
+            <div class="row">
+                <div class="col-6">
+                    <h2>新聞</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a class="text-danger" href="./news.html">
+                        <h2>更多新聞</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-md">
+            <div class="row w-100 py-auto">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                    <div><img class="w-100" src="./img/newspicture1.jpg" alt=""></div>
+                    <div>
+                        <p class="bg-dark p-3 w-100"><a href="">China
+                                Open: Goh/Lai Cherish ‘New Them’</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                    <div><img class="w-100" src="./img/newspicture2.jpg" alt=""></div>
+                    <div>
+                        <p class="bg-dark p-3 w-100"><a href="">China
+                                Open: Goh/Lai Cherish ‘New Them’</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                    <div><img class="w-100" src="./img/newspicture3.jpg" alt=""></div>
+                    <div>
+                        <p class="bg-dark p-3 w-100"><a href="">China
+                                Open: Goh/Lai Cherish ‘New Them’</a></p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                    <div><img class="w-100" src="./img/newspicture4.jpg" alt=""></div>
+                    <div>
+                        <p class="bg-dark p-3 w-100"><a href="">China
+                                Open: Goh/Lai Cherish ‘New Them’</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <section>
+        <div class="container-fluid w-100" id="next_tour_title">
+            <div class="row">
+                <div class="col-6">
+                    <h2>下個賽事</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a class="text-danger" href="">
+                        <h2>更多賽事</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid w-100 backgroundbadminton d-flex align-items-center" style="height: 500px; ">
+            <div class="row w-100">
+                <div class="col-12 col-md-8 d-flex align-items-center">
+                    <div class="row w-100">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <img class="w-50" src="./img/India-Open-2024.svg" alt="">
+                        </div>
+                        <div class="col-6 text-light d-flex flex-column justify-content-center align-items-start">
+                            <a href="./賽事結果website/indiaopen.html">
+                                <h1>YONEX-SUNRISE India Open 2025</h1>
+                            </a>
+                            <h3>14 - 19 January, India</h3>
+                            New Delhi <br><br>
+                            PRIZE MONEY USD $950,000
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4  justify-content-center align-items-center d-none d-md-flex">
+                    <img class="text-end" src="./img/WT_750.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <hr>
+
+    <section>
+        <div class="container-fluid w-100" id="rank_title">
+            <div class="row">
+                <div class="col-6">
+                    <h2>世界排名</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a class="text-danger" href="./bs5ranking.html">
+                        <h2>全部排名</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 排名內容晚點做 -->
+        <!-- 排名內容 -->
+        <div class="container-fluid">
+            <button class="tablink" onclick="openPage('MS', this, 'red')" id="defaultOpen">MEN SINGLE</button>
+            <button class="tablink" onclick="openPage('WS', this, 'red')">WOMEN SINGLE</button>
+            <button class="tablink" onclick="openPage('MD', this, 'red')">MEN DOUBLE</button>
+            <button class="tablink" onclick="openPage('WD', this, 'red')">WOMEN DOUBLE</button>
+            <button class="tablink" onclick="openPage('XD', this, 'red')">MIXED DOUBLE</button>
+
+            <div id="MS" class="tabcontent">
+                <div class="row w-100">
+                    <div class="col-4 ">
+                        <img src="https://img.bwfbadminton.com/image/upload/t_96_player_profile_portrait/v1697434141/assets/players/thumbnail/57945.png"
+                            alt="SHI Yu Qi" class="w-100 h-auto " style=" border-radius: 10px;">
+                    </div>
+                    <div class="col-8 ">
+                        <div class="row pt-3">
+                            <div class="col-2">
+                                <img src="./img/CHN.png" alt="China" style=" border:1px solid black;">
+
+                            </div>
+                            <div
+                                class="col-lg-5 col-10 d-flex align-items-center justify-content-center justify-content-lg-center">
+                                <h2 class="m-0">SHI Yu Qi</h2>
+                            </div>
+                            <div class="col-lg-5  justify-content-end d-none d-lg-flex"><button
+                                    style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
+                                    FULL BWF PROFILE</button></div>
+                        </div>
+                        <div class="row">
+                            <div style="background-color: rgb(223, 32, 39);;" class="col-6 text-center ">
+                                <br>
+                                <p>World Ranking</p>
+                                <strong>1</strong>
+                                <p>MEN'S SINGLE</p>
+
+                            </div>
+                            <div class="col-6  bg-light text-danger text-center">
+                                <br>
+                                <p>Point</p>
+                                <strong>104815</strong>
+                                <p>MEN'S SINGLE</p>
+                            </div>
+                        </div>
+                        <div class="row d-md-flex d-none">
+                            <div class="col-4 text-center ">
+                                <br>
+                                WIN RATE(%)
+                                <br><strong>75.4%</strong><br>319W/104L
+                            </div>
+                            <div class="col-4 text-center ">
+                                <br>AGE<br><strong>28</strong><br>28/02/1996
+                            </div>
+                            <div class="col-4 text-center ">
+
+                                <br>PLAYS<br><strong><img src="./img/player-right-hand.svg" alt=""></strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="WS" class="tabcontent">
+                <div class="row w-100">
+                    <div class="col-4 ">
+                        <img src="./img/anseyongno1.jpg" alt="AN SE YOUNG" class="w-100 h-auto "
+                            style=" border-radius: 10px;">
+                    </div>
+                    <div class="col-8 ">
+                        <div class="row pt-3">
+                            <div class="col-2">
+                                <img src="./img/korea.png" alt="KOREA" style=" border:1px solid black;">
+
+                            </div>
+                            <div
+                                class="col-lg-5 col-10 d-flex align-items-center justify-content-center justify-content-lg-center">
+                                <h2 class="m-0">AN SE YOUNG</h2>
+                            </div>
+                            <div class="col-lg-5  justify-content-end d-none d-lg-flex"><button
+                                    style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
+                                    FULL BWF PROFILE</button></div>
+                        </div>
+                        <div class="row">
+                            <div style="background-color: rgb(223, 32, 39);" class="col-6 text-center ">
+                                <br>
+                                <p>World Ranking</p>
+                                <strong>1</strong>
+                                <p>WOMEN'S SINGLE</p>
+
+                            </div>
+                            <div class="col-6  bg-light text-danger text-center">
+                                <br>
+                                <p>Point</p>
+                                <strong>111867</strong>
+                                <p>WOMEN'S SINGLE</p>
+                            </div>
+                        </div>
+                        <div class="row d-md-flex d-none">
+                            <div class="col-4 text-center ">
+                                <br>
+                                WIN RATE(%)
+                                <br><strong>81.7%</strong><br>299W/67L
+                            </div>
+                            <div class="col-4 text-center ">
+                                <br>AGE<br><strong>22</strong><br>05/02/2002
+                            </div>
+                            <div class="col-4 text-center ">
+
+                                <br>PLAYS<br><strong><img src="./img/player-right-hand.svg" alt=""></strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="MD" class="tabcontent">
+                <div class="row w-100">
+                    <div class="col-12 col-md-4">
+                        <div class="row" id="mdplayer1">
+                            <div class="col-6">
+                                <img class="img-fluid " src="./img/kimastrup.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <div class="">
+                                    <img src="./img/denmark.png" alt="">
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="" class="d-flex align-content-center">
+                                        Kim ASTRUP</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="mdplayer2">
+                            <div class="col-6">
+                                <img class="img-fluid" src="./img/rasmussen.png" alt="">
+
+                            </div>
+                            <div class="col-6 ">
+                                <div class=" d-flex align-content-center">
+                                    <img class="img-fluid" src="./img/denmark.png" alt="">
+
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="">Anders Skaarup
+                                        RASMUSSEN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12 col-md-8 " style="height: 300px;">
+                        <div class="row text-center h-100">
+                            <div class="col-lg-4 col-6" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>World
+                                Ranking
+                                <br><strong>1</strong><br>MEN'S
+                                DOUBLE
+                            </div>
+                            <div class="col-lg-4 col-6 text-danger bg-light">
+                                <br><br><br>POINT<br><strong>95003</strong><br>MEN'S
+                                DOUBLE <br>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>WIN RATE(%)
+                                <br><strong>66.1%</strong><br><br>373W/191L<br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="WD" class="tabcontent">
+                <div class="row w-100">
+                    <div class="col-12 col-md-4">
+                        <div class="row" id="wdplayer1">
+                            <div class="col-6">
+                                <img class="img-fluid " src="./img/BAEKHANA.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <div class="">
+                                    <img src="./img/korea.png" alt="">
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="" class="d-flex align-content-center">
+                                        BAEK HA NA</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="wdplayer2">
+                            <div class="col-6">
+                                <img class="img-fluid" src="./img/LEESOHEE.png" alt="">
+
+                            </div>
+                            <div class="col-6 ">
+                                <div class=" d-flex align-content-center">
+                                    <img class="img-fluid" src="./img/korea.png" alt="">
+
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="">LEE SO HEE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12 col-md-8 " style="height: 300px;">
+                        <div class="row text-center h-100">
+                            <div class="col-lg-4 col-6" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>World
+                                Ranking
+                                <br><strong>1</strong><br>WOMEN'S
+                                DOUBLE
+                            </div>
+                            <div class="col-lg-4 col-6 text-danger bg-light">
+                                <br><br><br>POINT<br><strong>95003</strong><br>WOMEN'S
+                                DOUBLE <br>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>WIN RATE(%)
+                                <br><strong>66.1%</strong><br><br>373W/191L<br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="XD" class="tabcontent">
+                <div class="row w-100">
+                    <div class="col-12 col-md-4">
+                        <div class="row" id="xdplayer1">
+                            <div class="col-6">
+                                <img class="img-fluid " src="./img/FENGYANZHE.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <div class="">
+                                    <img src="./img/CHN.png" alt="">
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="" class="d-flex align-content-center">
+                                        Feng Yan Zhe</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" id="xdplayer2">
+                            <div class="col-6">
+                                <img class="img-fluid" src="./img/HUANGDONGPING.png" alt="">
+
+                            </div>
+                            <div class="col-6 ">
+                                <div class=" d-flex align-content-center">
+                                    <img class="img-fluid" src="./img/CHN.png" alt="">
+
+                                </div>
+                                <div class="h-50  mt-4">
+                                    <a href="">HUANG DONG PING</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12 col-md-8 " style="height: 300px;">
+                        <div class="row text-center h-100">
+                            <div class="col-lg-4 col-6" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>World
+                                Ranking
+                                <br><strong>1</strong><br>MEN'S
+                                DOUBLE
+                            </div>
+                            <div class="col-lg-4 col-6 text-danger bg-light">
+                                <br><br><br>POINT<br><strong>95003</strong><br>MEN'S
+                                DOUBLE <br>
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block" style="background-color: rgb(223, 32, 39);">
+                                <br><br><br>WIN RATE(%)
+                                <br><strong>66.1%</strong><br><br>373W/191L<br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </section>
+    <hr>
+    <section>
+        <div class="container-fluid w-100" id="week_title">
+            <div class="row">
+                <div class="col-6">
+                    <h2>本週好球</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <a class="text-danger" href="">
+                        <h2>看更多</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <iframe width="100%" height="480" src="https://www.youtube.com/embed/mO5OkMth0os"
+                title="YONEX-SUNRISE India Open 2025 | Top Saves of the Week" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <hr>
+    <section class="mt-3 w-100">
+        <div class="row w-100">
+            <div class="col-6 d-flex align-items-center justify-content-end border-end">
+                <img class="img-fluid w-50" src="./img/hsbc_en-01.svg" alt="">
+            </div>
+
+            <div class="col-6 d-flex align-items-center justify-content-start border-start">
+                <img class="img-fluid w-50" src="./img/Etihad.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <br>
+    <section>
+        <div class="container-fluid text-bg-dark w-100 d-flex justify-content-around">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5  border-top ">
+
+
+                <div class="col mb-3 ">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">NEWS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">RANKINGS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">MATCH CENTER</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">TOOL</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Social Media</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://www.facebook.com/bwfbadminton"
+                                class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/bwfmedia"
+                                class="nav-link p-0 text-muted">X</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.youtube.com/user/bwf"
+                                class="nav-link p-0 text-muted">Youtube</a></li>
+                        <li class="nav-item mb-2"><a
+                                href="https://soundcloud.com/bwfbadminton/bwf-world-superseries-anthem"
+                                class="nav-link p-0 text-muted">Soundcloud</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Website links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://corporate.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF CORPORATE</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF FANSITE</a></li>
+                        <li class="nav-item mb-2"><a href="http://badmintonworld.tv/"
+                                class="nav-link p-0 text-muted">BADMINTONWORLD.TV</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfsudirmancup.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF Sudirman Cup</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfthomasubercups.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">TotalEnergies BWF Thomas & Uber Cup Finals</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfworldchampionships.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">TotalEnergies BWF World Championships</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>BWF HQ Contact</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Unit No. 1, Level 29</li>
+                        <li class="nav-item mb-2">Naza Tower Platinum Park</li>
+                        <li class="nav-item mb-2">No. 10, Persiaran KLCC</li>
+                        <li class="nav-item mb-2">50088 Kuala Lumpur</li>
+                        <li class="nav-item mb-2">Malaysia</li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+
+                </div>
+                <p class="text-muted">&copy; 2025</p>
+            </footer>
+        </div>
+
+    </section>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

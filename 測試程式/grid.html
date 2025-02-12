@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .item1 {
+            grid-area: header;
+        }
+
+
+        .item2 {
+            grid-area: img;
+        }
+
+
+        .item3 {
+            grid-area: news;
+        }
+
+
+        .item4 {
+            grid-area: nt;
+        }
+
+
+        .item5 {
+            grid-area: rank;
+        }
+
+        .item6 {
+            grid-area: if;
+        }
+
+        .item7 {
+            grid-area: spon;
+        }
+
+        .item8 {
+            grid-area: footer;
+        }
+
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                'header header header header header header'
+                'img img img img img img'
+                'news news news news news news'
+                'nt nt nt nt nt nt'
+                'rank rank rank rank rank rank'
+                'if if if if if if'
+                'spon spon spon spon spon spon'
+                'footer footer footer footer footer footer';
+            gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">IMG</div>
+        <div class="item3">NEWS</div>
+        <div class="item4">TOUR</div>
+        <div class="item5">RANK</div>
+        <div class="item6">IFRAME</div>
+        <div class="item7">SPONSOR</div>
+        <div class="item8">Footer</div>
+    </div>
+</body>
+
+
+</html>

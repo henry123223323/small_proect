@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./_css/comunity.css">
+    <link rel="stylesheet" href="./_css/navbar.css">
+    <link rel="stylesheet" href="./_css/onepagetab.css">
+
+    <!--上面css是社群網站icon -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(0, 0, 0, 0.316);
+        }
+
+        .t-all {
+            width: 100%;
+        }
+
+        .t-rank {
+            width: 15%;
+        }
+
+        .t-country {
+            width: 20%;
+        }
+
+        .t-player {
+            width: 50%;
+            color: wheat;
+        }
+
+        .t-point {
+            width: 15%;
+        }
+
+        .t-country>img {
+            width: 50px;
+        }
+
+        @media screen and (min-width: 720px) {
+
+            .topnav a {
+                visibility: visible;
+            }
+
+            .topnav span {
+                visibility: hidden;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .topnav a {
+                visibility: hidden;
+            }
+
+            .topnav span {
+                visibility: visible;
+            }
+        }
+
+        /*下面是社群網站icon css*/
+    </style>
+</head>
+
+<body>
+    <section id="top-menu" style="position:fixed; top:0; z-index: 999; ">
+        <header>
+            <div style="text-align:right;  position:fixed; top:0px; left:0px; right:0; background-color:white;">
+
+
+                <!-- 白色放社群網站圖示區域 -->
+                <div id="community" style="height: 20px; background-color:white; padding:0;">
+                    <a style=" position:fixed; top:40px; left:20px; " href=" ./homepage.html">
+                        <img style="height: 55px; box-shadow: 5px 1px 1px rgba(0, 0, 0, 0.316);  
+                    border:1px solid rgba(0, 0, 0, 0.601); background-color:white;" src="./img/logo-wt.svg">
+                    </a>
+                    <ul style="text-align:center;">
+                        <li class="headerlist"><a href="https://bwfbadminton.com/">BWF Fan Zone</a></li> &nbsp;
+                        <li class="headerlist"><a href="https://bwfworldtourfinals.bwfbadminton.com/">HSBC BWF World
+                                Tour Finals</a></li>&nbsp;
+                        <li class="headerlist"><a href="https://bwfworldtour.bwfbadminton.com/">HSBC BWF World Tour</a>
+                        </li>&nbsp;
+                        <li class="headerlist"><a href="https://bwfworldchampionships.bwfbadminton.com/">TotalEnergies
+                                BWF World Championships</a>
+                        </li>&nbsp;
+                        <li class="headerlist" id="more">
+                            <a class="dropbtn">more</a>
+                            <div class="dropdown-content">
+                                <a href="https://bwfsudirmancup.bwfbadminton.com/">TotalEnergies BWF Sudirman Cup
+                                    Finals</a>
+                                <a href="https://bwfthomasubercups.bwfbadminton.com/">TotalEnergies BWF Thomas & Uber
+                                    Cup Finals</a>
+                                <a href="https://olympics.bwfbadminton.com/">Paris 2024 Paralympics</a>
+                            </div>
+                        </li>&nbsp;
+
+                    </ul>
+
+                    <a href="https://www.facebook.com/bwfbadminton" target="_blank" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/bwfmedia" class="fa fa-twitter"></a>
+                    <a href="https://www.instagram.com/bwf.official/" class="fa fa-instagram"></a>
+                </div>
+                <!-- 紅色放menu清單區域 -->
+                <div style="background-color: rgb(223, 32, 39); height:40px;">
+                    <div class="topnav" style="margin-left: 220px;">
+                        <a class="active" href="./homepage.html">Home</a>
+                        <a href="./news.html">News</a>
+                        <a href="./ranking.html">Ranking</a>
+                        <a href="./matchcenter.html">Match Center</a>
+                        <span style="color:white;font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    </div>
+                </div>
+                <!-- 第三層紅色顯示live區域 -->
+                <div style=" font-size: small; text-align:center; color:white;background-color:rgb(150,14, 20)">
+                    Live:
+                    <span
+                        style="border-radius: 50px; background-color:gray; border: 1px aolid black; padding: 0 20px;">Super750</span>
+                    <a href="./matchcenter.html" style="text-decoration: none; color: white; ">YONEX-SUNRISE India
+                        Open
+                        2025</a>
+                </div>
+            </div>
+        </header>
+        <!-- 隱藏menu的內容 -->
+        <nav>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="./news.html">新聞</a>
+                    <a href="./ranking.html">排名</a>
+                    <a href="./matchcenter.html">賽事資訊</a>
+                    <a href="./tool.html">記分板</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- 上面是MENU內容 -->
+
+    <section style="margin-top: 100px;background-image: url(./img/bg_home_screen.jpg);">
+        <div id="ranking_title" class="std-title" style="display: flex;">
+            <div style="flex: 2;">
+
+                <h2 style="text-align: left; color: white;"> &nbsp;&nbsp;BWF WORLD RANKING</h2>
+            </div>
+            <div style="flex: 1;"><img src="./img/WORLDRANKING.svg" alt=""></div>
+        </div>
+
+        <!-- 排名內容 -->
+        <div>
+            <div style="display: flex;">
+                <div style="flex: 1;">
+                    <label for="continent" style="color: white; padding-left:20px;">Continent:</label>
+                    <select name="continent" id="continent">
+                        <option value="all">ALL</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="america">America</option>
+                        <option value="africa">Africa</option>
+                        <option value="oceania">Oceania</option>
+                        <option value="taiwan">Taiwan</option>
+                    </select>
+                </div>
+                <!-- sort -->
+                <div style="flex: 1; text-align:right; padding-right:20px;">
+                    <label for="sort" style="font-size: 30px; color:white;">Open Rows:</label>
+                    <select id="sort" style="text-align: right; width:50px;">
+                        <option id="sort10" value="10">10</option>
+                        <option id="sort25" value="25">25</option>
+                    </select>
+                </div>
+            </div>
+            <button class="tablink" onclick="openPage('MS', this, 'red')" id="defaultOpen">MEN SINGLE</button>
+            <button class="tablink" onclick="openPage('WS', this, 'red')">WOMEN SINGLE</button>
+            <button class="tablink" onclick="openPage('MD', this, 'red')">MEN DOUBLE</button>
+            <button class="tablink" onclick="openPage('WD', this, 'red')">WOMEN DOUBLE</button>
+            <button class="tablink" onclick="openPage('XD', this, 'red')">MIXED DOUBLE</button>
+
+            <div id="MS" class="tabcontent">
+
+                <div style="display: flex; position: relative;  width:100%;">
+                    <!-- 左側圖像 -->
+                    <div style="flex: 2; position: relative;">
+                        <img src="https://img.bwfbadminton.com/image/upload/t_96_player_profile_portrait/v1697434141/assets/players/thumbnail/57945.png"
+                            alt="SHI Yu Qi" style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+
+                    <!-- 右側資訊 -->
+                    <div style="flex: 5; padding-left: 20px; ">
+                        <!-- 第一排 -->
+                        <div style="height:20%; display: flex; ">
+                            <div style="flex: 1;">
+
+                                <img src="./img/CHN.png" alt="China" style=" border:1px solid black;">
+
+                            </div>
+                            <div style="flex: 2; display:inline; margin:10px;">
+                                <h2 style="margin: 0;">SHI Yu Qi</h2>
+                            </div>
+                            <div style="flex: 8; text-align:right;">
+                                <button style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
+                                    FULL
+                                    BWF
+                                    PROFILE</button>
+                            </div>
+                        </div>
+                        <!-- 第二層 -->
+                        <div style="text-align: center; display: flex; height:40%;">
+                            <!-- 世界排名 -->
+                            <div style=" width:50%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br>World
+                                    Ranking
+                                    <br><strong>1</strong><br>MEN'S
+                                    SINGLE
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 50%; background-color: white;">
+                                <p style="flex:1; color:red;margin: 5px 0;">
+                                    <br>POINT<br><strong>104815</strong><br>MEN'S
+                                    SINGLE
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <!-- 第三層 -->
+                        <div style="height:40%; display:flex">
+
+                            <div style=" width:33.3%;  ">
+                                <p style="flex:1; margin: 5px 0;text-align: center;"><br>WIN RATE(%)
+                                    <br><strong>75.4%</strong><br>319W/104L
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 33.3%; ">
+                                <p style="flex:1; margin: 5px 0;"><br>AGE<br><strong>28</strong><br>28/02/1996
+                                </p>
+                            </div>
+                            <div style="text-align: center; width: 33.3%; ">
+                                <p style="flex:1; margin: 5px 0;">
+                                    <br>PLAYS<br><strong><img src="./img/player-right-hand.svg" alt=""></strong>
+                                </p>
+                            </div>
+
+                            <!-- <p style="margin: 5px 0;">POINT: <strong>92128</strong></p>
+                    <p style="margin: 5px 0;">Age: <strong>28</strong></p>
+                    <p style="margin: 5px 0;">Career Wins: <strong>319</strong></p> -->
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 排名表格 -->
+                <div>
+                    <table class="t-all">
+                        <tr id="table-title">
+                            <th class="t-rank">RANK</th>
+                            <th class="t-country">COUNTRY</th>
+                            <th class="t-player">PLAYER</th>
+                            <th class="t-point">POINT</th>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">1</td>
+                            <td class="t-country"><img src="./img/CHN.png" title="CHINA"></td>
+                            <td class="t-player"><a href="">SHI Yu Qi</a></td>
+                            <td class="t-point">104815</td>
+                        </tr>
+                        <tr class="sort10 europe">
+                            <td class="t-rank">2</td>
+                            <td class="t-country"><img src="./img/denmark.png" title="DENMARK"></td>
+                            <td class="t-player"><a href="">Anders ANTONSEN</a></td>
+                            <td class="t-point">95621</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">3</td>
+                            <td class="t-country"><img src="./img/indonesia.png" title="INDONESIA"></td>
+                            <td class="t-player"><a href="">Jonathan CHRISTIE</a></td>
+                            <td class="t-point">87547</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">4</td>
+                            <td class="t-country"><img src="./img/thailand.png" title="THAILAND"></td>
+                            <td class="t-player"><a href="">Kunlavut VITIDSARN</a></td>
+                            <td class="t-point">83888</td>
+                        </tr>
+                        <tr class="sort10 europe">
+                            <td class="t-rank">5</td>
+                            <td class="t-country"><img src="./img/denmark.png" title="DENMARK"></td>
+                            <td class="t-player"><a href="">Viktor AXELSEN</a></td>
+                            <td class="t-point">82630</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">6</td>
+                            <td class="t-country"><img src="./img/CHN.png" title="CHINA"></td>
+                            <td class="t-player"><a href="">LI Shi Feng</a></td>
+                            <td class="t-point">80096</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">7</td>
+                            <td class="t-country"><img src="./img/japan.png" title="JAPAN"></td>
+                            <td class="t-player"><a href="">Kodai NARAOKA</a></td>
+                            <td class="t-point">79847</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">8</td>
+                            <td class="t-country"><img src="./img/malaysia.png" title="MALAYSIA"></td>
+                            <td class="t-player"><a href="">LEE ZII JIA</a></td>
+                            <td class="t-point">79016</td>
+                        </tr>
+                        <tr class="sort10 asia taiwan">
+                            <td class="t-rank">9</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player"><a href="">CHOU TIEN CHEN</a></td>
+                            <td class="t-point">77657</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">10</td>
+                            <td class="t-country"><img src="./img/indonesia.png" title="INDONESIA"></td>
+                            <td class="t-player"><a href="">ANTHONY SINISUKA GINGTING</a></td>
+                            <td class="t-point">65125</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">11</td>
+                            <td class="t-country"><img src="./img/japan.png" title="JAPAN"></td>
+                            <td class="t-player">Koki WATANABE</td>
+                            <td class="t-point">64374</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">12</td>
+                            <td class="t-country"><img src="./img/india.png" title="INDIA"></td>
+                            <td class="t-player">LAKSHYA SEN</td>
+                            <td class="t-point">63668</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">13</td>
+                            <td class="t-country"><img src="./img/singapore.png" title="SINGAPORE"></td>
+                            <td class="t-player">LOH KEAN YEW</td>
+                            <td class="t-point">61333</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">14</td>
+                            <td class="t-country"><img src="./img/japan.png" title="JAPAN"></td>
+                            <td class="t-player">Kenta NISHIMOTO</td>
+                            <td class="t-point">58212</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">15</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player">LIN Chun Yi</td>
+                            <td class="t-point">57471</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">16</td>
+                            <td class="t-country"><img src="./img/hongkong.png" title="HONG KONG"></td>
+                            <td class="t-player">NG KA LONG ANGUS</td>
+                            <td class="t-point">56706</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">17</td>
+                            <td class="t-country"><img src="./img/france.png" title="FRANCE"></td>
+                            <td class="t-player">ALEX LANIER</td>
+                            <td class="t-point">76150</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">18</td>
+                            <td class="t-country"><img src="./img/france.png" title="FRANCE"></td>
+                            <td class="t-player">TOMA JUNIOR POPOV</td>
+                            <td class="t-point">56145</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">19</td>
+                            <td class="t-country"><img src="./img/CHN.png" title="CHINA"></td>
+                            <td class="t-player">LU GUANG ZU</td>
+                            <td class="t-point">56041</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">20</td>
+                            <td class="t-country"><img src="./img/hongkong.png" title="HONG KONG"></td>
+                            <td class="t-player">LEE CHEUK YIU</td>
+                            <td class="t-point">54199</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">21</td>
+                            <td class="t-country"><img src="./img/CHN.png" title="CHINA"></td>
+                            <td class="t-player">WENG HONG YANG</td>
+                            <td class="t-point">52960</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">22</td>
+                            <td class="t-country"><img src="./img/CHN.png" title="CHINA"></td>
+                            <td class="t-player">LEI LAN XI</td>
+                            <td class="t-point">51786</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">23</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player">LEE CHIA HAO</td>
+                            <td class="t-point">50875</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">24</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player">WANG TZU WEI</td>
+                            <td class="t-point">50753</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">25</td>
+                            <td class="t-country"><img src="./img/japan.png" title="JAPAN"></td>
+                            <td class="t-player">Yushi TANAKA</td>
+                            <td class="t-point">49870</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">27</td>
+                            <td class="t-country"><img src="./img/france.png" title="FRANCE"></td>
+                            <td class="t-player">CHHRISTO POPOV</td>
+                            <td class="t-point">49625</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">29</td>
+                            <td class="t-country"><img src="./img/denmark.png" title="DENMARK"></td>
+                            <td class="t-player">RASMUS GEMKE</td>
+                            <td class="t-point">47264</td>
+                        </tr>
+                        <tr class="sort100 america">
+                            <td class="t-rank">30</td>
+                            <td class="t-country"><img src="./img/canada.png" title="CANADA"></td>
+                            <td class="t-player">BRAIN YANG</td>
+                            <td class="t-point">45206</td>
+                        </tr>
+                        <tr class="sort100 taiwan">
+                            <td class="t-rank">31</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player">CHI YU JEN</td>
+                            <td class="t-point">45206</td>
+                        </tr>
+                        <tr class="sort100 taiwan">
+                            <td class="t-rank">33</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" title="TAIWAN"></td>
+                            <td class="t-player">SU LI YANG</td>
+                            <td class="t-point">41160</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">41</td>
+                            <td class="t-country"><img src="./img/ireland.png" title="IRELAND"></td>
+                            <td class="t-player">NHAT NGUYEN</td>
+                            <td class="t-point">35550</td>
+                        </tr>
+                        <tr class="sort100 america">
+                            <td class="t-rank">65</td>
+                            <td class="t-country"><img src="./img/brazil.png" title="BRAZIL"></td>
+                            <td class="t-player">YGOR COELHO</td>
+                            <td class="t-point">25332</td>
+                        </tr>
+                        <tr class="sort100 america">
+                            <td class="t-rank">75</td>
+                            <td class="t-country"><img src="./img/elsalvador.png" title="EL SALVADOR"></td>
+                            <td class="t-player">URIEL FRANCISCO CANJURA ARTIGA</td>
+                            <td class="t-point">22459</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">103</td>
+                            <td class="t-country"><img src="./img/mauritius.png" title="MAURITIUS"></td>
+                            <td class="t-player">GEORGES JULIEN PAUL</td>
+                            <td class="t-point">18022</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">113</td>
+                            <td class="t-country"><img src="./img/nigeria.png" title="NIGERIA"></td>
+                            <td class="t-player">ANUOLUWAPO JUWON OPEYORI</td>
+                            <td class="t-point">16098</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">122</td>
+                            <td class="t-country"><img src="./img/newzealand.png" title="NEW ZEALAND"></td>
+                            <td class="t-player">EDWARD LAU</td>
+                            <td class="t-point">14620</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">150</td>
+                            <td class="t-country"><img src="./img/australia.png" title="AUSTRALIA"></td>
+                            <td class="t-player">JACK YU</td>
+                            <td class="t-point">12138</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">160</td>
+                            <td class="t-country"><img src="./img/egypt.png" title="EGYPT"></td>
+                            <td class="t-player">ADHAM HATEM ELGAMAL</td>
+                            <td class="t-point">11074</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">163</td>
+                            <td class="t-country"><img src="./img/australia.png" title="AUSTRALIA"></td>
+                            <td class="t-player">KARONO KARONO</td>
+                            <td class="t-point">10960</td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </div>
+
+            <div id="WS" class="tabcontent">
+                <div style="display: flex; position: relative;  width:100%;">
+                    <!-- 左側圖像 -->
+                    <div style="flex: 2; position: relative;">
+                        <img src="./img/anseyongno1.jpg" alt="AN Se Young"
+                            style="width: 100%; height: auto; border-radius: 10px;">
+                    </div>
+
+                    <!-- 右側資訊 -->
+                    <div style="flex: 5; padding-left: 20px; ">
+                        <!-- 第一排 -->
+                        <div style="height:20%; display: flex; ">
+                            <div style="flex: 1;">
+
+                                <img src="./img/korea.png" alt="Korea" style=" border:1px solid black;">
+
+                            </div>
+                            <div style="flex: 2.5; display:inline; margin:10px;">
+                                <h2 style="margin: 0; display:inline">AN Se Young</h2>
+                            </div>
+                            <div style="flex: 8; text-align:right;">
+                                <button style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
+                                    FULL
+                                    BWF
+                                    PROFILE</button>
+                            </div>
+                        </div>
+                        <!-- 第二層 -->
+                        <div style="text-align: center; display: flex; height:40%;">
+                            <!-- 世界排名 -->
+                            <div style=" width:50%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br>World
+                                    Ranking
+                                    <br><strong>1</strong><br>WOMEN'S
+                                    SINGLE
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 50%; background-color: white;">
+                                <p style="flex:1; color:red;margin: 5px 0;">
+                                    <br>POINT<br><strong>109267</strong><br>WOMEN'S
+                                    SINGLE
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <!-- 第三層 -->
+                        <div style="height:40%; display:flex">
+
+                            <div style=" width:33.3%;  ">
+                                <p style="flex:1; margin: 5px 0;text-align: center;"><br>WIN RATE(%)
+                                    <br><strong>81.5%</strong><br>297W/67L
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 33.3%; ">
+                                <p style="flex:1; margin: 5px 0;"><br>AGE<br><strong>22</strong><br>05/02/2002
+                                </p>
+                            </div>
+                            <div style="text-align: center; width: 33.3%; ">
+                                <p style="flex:1; margin: 5px 0;">
+                                    <br>PLAYS<br><strong><img src="./img/player-right-hand.svg" alt=""></strong>
+                                </p>
+                            </div>
+
+                            <!-- <p style="margin: 5px 0;">POINT: <strong>92128</strong></p>
+                    <p style="margin: 5px 0;">Age: <strong>28</strong></p>
+                    <p style="margin: 5px 0;">Career Wins: <strong>319</strong></p> -->
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 排名表格 -->
+                <div>
+                    <table class="t-all">
+                        <tr id="table-title">
+                            <th class="t-rank">RANK</th>
+                            <th class="t-country">COUNTRY</th>
+                            <th class="t-player">PLAYER</th>
+                            <th class="t-point">POINT</th>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">1</td>
+                            <td class="t-country"><img src="./img/korea.png" alt="Korea" title="Korea"></td>
+                            <td class="t-player">AN Se Young</td>
+                            <td class="t-point">109267</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">2</td>
+                            <td class="t-country"><img src="./img/CHN.png" alt="China" title="China"></td>
+                            <td class="t-player">WANG Zhi Yi</td>
+                            <td class="t-point">103000</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">3</td>
+                            <td class="t-country"><img src="./img/japan.png" alt="Japan" title="Japan"></td>
+                            <td class="t-player">Akane YAMAGUCHI</td>
+                            <td class="t-point">88457</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">4</td>
+                            <td class="t-country"><img src="./img/CHN.png" alt="China" title="China"></td>
+                            <td class="t-player">HAN Yue</td>
+                            <td class="t-point">80309</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">5</td>
+                            <td class="t-country"><img src="./img/indonesia.png" alt="Indonesia" title="Indonesia"></td>
+                            <td class="t-player">Gregoria Mariska TUNJUNG</td>
+                            <td class="t-point">77982</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">6</td>
+                            <td class="t-country"><img src="./img/CHN.png" alt="China" title="China"></td>
+                            <td class="t-player">CHEN Yu Fei</td>
+                            <td class="t-point">72182</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">7</td>
+                            <td class="t-country"><img src="./img/thailand.png" alt="Thailand" title="Thailand"></td>
+                            <td class="t-player">Supanida KATETHONG</td>
+                            <td class="t-point">67524</td>
+                        </tr>
+                        <tr class="sort10 europe">
+                            <td class="t-rank">8</td>
+                            <td class="t-country"><img src="./img/spain.png" alt="Spain" title="Spain"></td>
+                            <td class="t-player">Carolina MARIN</td>
+                            <td class="t-point">64796</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">9</td>
+                            <td class="t-country"><img src="./img/thailand.png" alt="Thailand" title="Thailand"></td>
+                            <td class="t-player">Busanan ONGBAMRUNGPHAN</td>
+                            <td class="t-point">64630</td>
+                        </tr>
+                        <tr class="sort10 asia taiwan">
+                            <td class="t-rank">10</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">TAI Tzu Ying</td>
+                            <td class="t-point">63721</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">11</td>
+                            <td class="t-country"><img src="./img/japan.png" alt="Japan" title="Japan"></td>
+                            <td class="t-player">Tomoka MIYAZAKI</td>
+                            <td class="t-point">62637</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">12</td>
+                            <td class="t-country"><img src="./img/thailand.png" alt="Thailand" title="Thailand"></td>
+                            <td class="t-player">Pornpawee CHOCHUWONG</td>
+                            <td class="t-point">60784</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">13</td>
+                            <td class="t-country"><img src="./img/singapore.png" alt="Singapore" title="Singapore"></td>
+                            <td class="t-player">YEO Jia Min</td>
+                            <td class="t-point">60550</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">14</td>
+                            <td class="t-country"><img src="./img/thailand.png" alt="Thailand" title="Thailand"></td>
+                            <td class="t-player">Ratchanok INTANON</td>
+                            <td class="t-point">58983</td>
+                        </tr>
+                        <tr class="sort25 america">
+                            <td class="t-rank">15</td>
+                            <td class="t-country"><img src="./img/usa.png" alt="USA" title="USA"></td>
+                            <td class="t-player">Beiwen ZHANG</td>
+                            <td class="t-point">58376</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">16</td>
+                            <td class="t-country"><img src="./img/india.png" alt="India" title="India"></td>
+                            <td class="t-player">PUSARLA V. Sindhu</td>
+                            <td class="t-point">58112</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">17</td>
+                            <td class="t-country"><img src="./img/indonesia.png" alt="Indonesia" title="Indonesia"></td>
+                            <td class="t-player">Putri Kusuma WARDANI</td>
+                            <td class="t-point">56800</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">18</td>
+                            <td class="t-country"><img src="./img/CHN.png" alt="China" title="China"></td>
+                            <td class="t-player">GAO Fang Jie</td>
+                            <td class="t-point">54130</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">19</td>
+                            <td class="t-country"><img src="./img/japan.png" alt="Japan" title="Japan"></td>
+                            <td class="t-player">Nozomi OKUHARA</td>
+                            <td class="t-point">51331</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">20</td>
+                            <td class="t-country"><img src="./img/korea.png" alt="Korea" title="Korea"></td>
+                            <td class="t-player">KIM Ga Eun</td>
+                            <td class="t-point">50690</td>
+                        </tr>
+                        <tr class="sort25 america">
+                            <td class="t-rank">21</td>
+                            <td class="t-country"><img src="./img/canada.png" alt="Canada" title="Canada"></td>
+                            <td class="t-player">Michelle LI</td>
+                            <td class="t-point">50567</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">22</td>
+                            <td class="t-country"><img src="./img/japan.png" alt="Japan" title="Japan"></td>
+                            <td class="t-player">Natsuki NIDAIRA</td>
+                            <td class="t-point">49781</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">23</td>
+                            <td class="t-country"><img src="./img/denmark.png" alt="Denmark" title="Denmark"></td>
+                            <td class="t-player">Mia BLICHFELDT</td>
+                            <td class="t-point">48194</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">24</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">SUNG Shuo Yun</td>
+                            <td class="t-point">47750</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">25</td>
+                            <td class="t-country"><img src="./img/denmark.png" alt="Denmark" title="Denmark"></td>
+                            <td class="t-player">Line Højmark KJAERSFELDT</td>
+                            <td class="t-point">47336</td>
+                        </tr>
+                        <tr class="sort100 asia taiwan">
+                            <td class="t-rank">28</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">CHIU PIN CHIAN</td>
+                            <td class="t-point">44280</td>
+                        </tr>
+                        <tr class="sort100 asia taiwan">
+                            <td class="t-rank">29</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">PAI YU PO</td>
+                            <td class="t-point">43698</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">31</td>
+                            <td class="t-country"><img src="./img/scotland.png" alt="Scotland" title="Scotland"></td>
+                            <td class="t-player">Kirsty GILMOUR</td>
+                            <td class="t-point">43179</td>
+                        </tr>
+                        <tr class="sort100 asia taiwan">
+                            <td class="t-rank">33</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">WEN CHI HSU</td>
+                            <td class="t-point">42424</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">35</td>
+                            <td class="t-country"><img src="./img/denmark.png" alt="Denmark" title="Denmark"></td>
+                            <td class="t-player"> Julie Dawall JAKOBSEN</td>
+                            <td class="t-point">41242</td>
+                        </tr>
+                        <tr class="sort100 asia taiwan">
+                            <td class="t-rank">36</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png" alt="Chinese Taipei"
+                                    title="Chinese Taipei"></td>
+                            <td class="t-player">LIN HSIANG TI</td>
+                            <td class="t-point">39980</td>
+                        </tr>
+                        <tr class="sort100 europe">
+                            <td class="t-rank">37</td>
+                            <td class="t-country"><img src="./img/denmark.png" alt="Denmark" title="Denmark"></td>
+                            <td class="t-player"> LINE CHRISTOPHERSEN</td>
+                            <td class="t-point">39483</td>
+                        </tr>
+                        <tr class="sort100 america">
+                            <td class="t-rank">41</td>
+                            <td class="t-country"><img src="./img/usa.png" alt="USA" title="USA"></td>
+                            <td class="t-player">LAUREN LAM</td>
+                            <td class="t-point">34980</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">92</td>
+                            <td class="t-country"><img src="./img/australia.png" alt="Australia" title="Australia"></td>
+                            <td class="t-player">TIFFANY HO</td>
+                            <td class="t-point">21049</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">115</td>
+                            <td class="t-country"><img src="./img/mauritius.png" alt="Mauritius" title="Mauritius"></td>
+                            <td class="t-player"> KATE FOO KUNE</td>
+                            <td class="t-point">16172</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">116</td>
+                            <td class="t-country"><img src="./img/uganda.png" alt="Uganda" title="Uganda"></td>
+                            <td class="t-player">
+                                Fadilah Shamika MOHAMED RAFI</td>
+                            <td class="t-point">16021</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">120</td>
+                            <td class="t-country"><img src="./img/australia.png" alt="Australia" title="Australia"></td>
+                            <td class="t-player">
+                                Kai Qi (Bernice) TEOH</td>
+                            <td class="t-point">15404</td>
+                        </tr>
+                        <tr class="sort100 africa">
+                            <td class="t-rank">127</td>
+                            <td class="t-country"><img src="./img/southafrica.png" alt="South Africa"
+                                    title="South Africa"></td>
+                            <td class="t-player">
+                                Johanita SCHOLTZ</td>
+                            <td class="t-point">14532</td>
+                        </tr>
+                        <tr class="sort100 oceania">
+                            <td class="t-rank">197</td>
+                            <td class="t-country"><img src="./img/newzealand.png" alt="New Zealand" title="New Zealand">
+                            </td>
+                            <td class="t-player">SHAUNNA LI</td>
+                            <td class="t-point">8780</td>
+                        </tr>
+
+
+                    </table>
+
+
+                </div>
+            </div>
+            <!-- title家道這裡 -->
+            <div id="MD" class="tabcontent">
+                <div id="men-double-profile" style="display: flex; position: relative;  width:100%;">
+                    <div id="left-men-double-profile" style="flex: 1;  ">
+                        <div id="mdplayer1" style="height:50%; display: flex; margin-bottom:10px;">
+                            <img style="height: 150px;" src="./img/kimastrup.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/denmark.png"><br>
+                                <br>
+                                <a href="">Kim ASTRUP</a>
+                            </div>
+                        </div>
+                        <div id="mdplayer2" style=" height:50%; display: flex;">
+                            <img style="height: 150px;" src="./img/rasmussen.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/denmark.png"><br>
+                                <br>
+                                <a href="">Anders Skaarup <br>
+                                    RASMUSSEN</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-men-double-profile" style="flex: 2; border:2px black solid;">
+
+                        <!-- 第1層 -->
+                        <div style="text-align: center; display: flex; height:100%;">
+                            <!-- 世界排名 -->
+                            <!-- <div style="height: 33.3%;"></div> -->
+
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>World
+                                    Ranking
+                                    <br><br><strong>1</strong><br><br><br><br>MEN'S
+                                    DOUBLE
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 33.3%; background-color: white;">
+                                <p style="flex:1; color:red;margin: 5px 0;">
+                                    <br><br><br><br>POINT<br><br><strong>95003</strong><br><br><br><br>MEN'S
+                                    DOUBLE
+                                </p>
+                            </div>
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>WIN RATE(%)
+                                    <br><br><strong>66.1%</strong><br><br><br><br>373W/191L
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div style="height: 33.3%;"></div> -->
+                    </div>
+
+                </div>
+                <!-- 排名表格 -->
+                <div>
+                    <table class="t-all">
+                        <tr id="table-title">
+                            <th class="t-rank">RANK</th>
+                            <th class="t-country">COUNTRY</th>
+                            <th class="t-player">PLAYER</th>
+                            <th class="t-point">POINT</th>
+                        </tr>
+                        <tr class="sort10 europe">
+                            <td class="t-rank">1</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Kim ASTRUP <br>Anders Skaarup RASMUSSEN</td>
+                            <td class="t-point">95,003</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">2</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">GOH Sze Fei <br>Nur IZZUDDIN</td>
+                            <td class="t-point">85,916</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">3</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">LIANG Wei Keng <br>WANG Chang</td>
+                            <td class="t-point">85,818</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">4</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Fajar ALFIAN <br> Muhammad Rian ARDIANTO</td>
+                            <td class="t-point">85,577</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">5</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">Aaron CHIA <br>SOH Wooi Yik</td>
+                            <td class="t-point">82,065</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">6</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">HE Ji Ting <br>REN Xiang Yu</td>
+                            <td class="t-point">80,631</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">7</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">KANG Min Hyuk <br>SEO Seung Jae</td>
+                            <td class="t-point">78,415</td>
+                        </tr>
+                        <tr class="sort10 asia taiwan">
+                            <td class="t-rank">8</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">LEE Jhe-Huei <br>YANG Po-Hsuan</td>
+                            <td class="t-point">71,604</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">9</td>
+                            <td class="t-country"><img src="./img/india.png"><br><img src="./img/india.png"></td>
+                            <td class="t-player">Satwiksairaj RANKIREDDY <br>Chirag SHETTY</td>
+                            <td class="t-point">71,480</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">10</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Takuro HOKI <br>Yugo KOBAYASHI</td>
+                            <td class="t-point">71,059</td>
+                        </tr>
+
+                        <tr class="sort25 asia">
+                            <td class="t-rank">11</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Sabar Karyaman GUTAMA <br>Moh Reza Pahlevi ISFAHANI</td>
+                            <td class="t-point">69,190</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">12</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">LEE Yang <br>WANG Chi-Lin</td>
+                            <td class="t-point">65,518</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">13</td>
+                            <td class="t-country"><img src="./img/england.png"><br><img src="./img/england.png"></td>
+                            <td class="t-player">Ben LANE <br>Sean VENDY</td>
+                            <td class="t-point">63,468</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">14</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">MAN Wei Chong <br>Kai Wun TEE</td>
+                            <td class="t-point">60,610</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">15</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">CHEN Bo Yang <br>LIU Yi</td>
+                            <td class="t-point">57,574</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">16</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Rasmus KJÆR <br>Frederik SØGAARD</td>
+                            <td class="t-point">55,724</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">17</td>
+                            <td class="t-country"><img src="./img/thailand.png"><br><img src="./img/thailand.png"></td>
+                            <td class="t-player">Supak JOMKOH <br>Kittinupong KEDREN</td>
+                            <td class="t-point">52,640</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">18</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Muhammad Shohibul FIKRI <br>Bagas MAULANA</td>
+                            <td class="t-point">50,851</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">19</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Kenya MITSUHASHI <br>Hiroki OKAMURA</td>
+                            <td class="t-point">47,442</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">20</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Andreas SØNDERGAARD <br>Jesper TOFT</td>
+                            <td class="t-point">45,510</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">21</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">CHOONG Hon Jian <br> HAIKAL Muhammad</td>
+                            <td class="t-point">44,981</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">22</td>
+                            <td class="t-country"><img src="./img/france.png"><br><img src="./img/france.png"></td>
+                            <td class="t-player">Christo POPOV <br>Toma Junior POPOV</td>
+                            <td class="t-point">44,838</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">23</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">Junaidi ARIF <br>Roy King YAP</td>
+                            <td class="t-point">44,460</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">24</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Leo Rolly CARNANDO <br>Bagas MAULANA</td>
+                            <td class="t-point">44,340</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">25</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">Fang-Chih LEE <br>Fang-Jen LEE</td>
+                            <td class="t-point">43,780</td>
+                        </tr>
+                    </table>
+
+
+
+                </div>
+            </div>
+
+            <div id="WD" class="tabcontent">
+                <div id="women-double-profile" style="display: flex; position: relative;  width:100%;">
+                    <div id="left-women-double-profile" style="flex: 1;  ">
+                        <div id="wdplayer1" style="height:50%; display: flex; margin-bottom:10px;">
+                            <img style="height: 150px;" src="./img/BAEKHANA.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/korea.png"><br>
+                                <br>
+                                <a href="">BEAK HA NA</a>
+                            </div>
+                        </div>
+                        <div id="wdplayer2" style=" height:50%; display: flex;">
+                            <img style="height: 150px;" src="./img/LEESOHEE.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/korea.png"><br>
+                                <br>
+                                <a href="">LEE So Hee</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-women-double-profile" style="flex: 2; border:2px black solid;">
+
+                        <!-- 第1層 -->
+                        <div style="text-align: center; display: flex; height:100%;">
+                            <!-- 世界排名 -->
+                            <!-- <div style="height: 33.3%;"></div> -->
+
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>World
+                                    Ranking
+                                    <br><br><strong>1</strong><br><br><br><br>WOMEN'S
+                                    DOUBLE
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 33.3%; background-color: white;">
+                                <p style="flex:1; color:red;margin: 5px 0;">
+                                    <br><br><br><br>POINT<br><br><strong>101216</strong><br><br><br><br>WOMEN'S
+                                    DOUBLE
+                                </p>
+                            </div>
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>WIN RATE(%)
+                                    <br><br><strong>77.7%</strong><br><br><br><br>115W-33L
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div style="height: 33.3%;"></div> -->
+                    </div>
+
+                </div>
+                <!-- 排名表格 -->
+                <div>
+                    <table class="t-all">
+                        <tr id="table-title">
+                            <th class="t-rank">RANK</th>
+                            <th class="t-country">COUNTRY</th>
+                            <th class="t-player">PLAYER</th>
+                            <th class="t-point">POINT</th>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">1</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">BAEK Ha Na <br>LEE So Hee</td>
+                            <td class="t-point">101,216</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">2</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">LIU Sheng Shu <br>TAN Ning</td>
+                            <td class="t-point">99,146</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">3</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Nami MATSUYAMA <br>Chiharu SHIDA</td>
+                            <td class="t-point">90,195</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">4</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">CHEN Qing Chen <br>JIA Yi Fan</td>
+                            <td class="t-point">81,906</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">5</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Rin IWANAGA <br>Kie NAKANISHI</td>
+                            <td class="t-point">78,095</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">6</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">LI Yi Jing <br>LUO Xu Min</td>
+                            <td class="t-point">75,640</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">7</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">TAN Pearly <br>THINAAH Muralitharan</td>
+                            <td class="t-point">74,943</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">8</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Febriana Dwipuji KUSUMA <br>Amallia Cahaya PRATIWI</td>
+                            <td class="t-point">65,514</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">9</td>
+                            <td class="t-country"><img src="./img/india.png"><br><img src="./img/india.png"></td>
+                            <td class="t-player">Treesa JOLLY <br>GAYATRI GOPICHAND PULLELA</td>
+                            <td class="t-point">59,104</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">10</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">KIM So Yeong <br>KONG Hee Yong</td>
+                            <td class="t-point">58,530</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">11</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">ZHANG Shu Xian <br>ZHENG Yu</td>
+                            <td class="t-point">56,021</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">12</td>
+                            <td class="t-country"><img src="./img/bulgaria.png"><br><img src="./img/bulgaria.png"></td>
+                            <td class="t-player">Gabriela STOEVA <br>Stefani STOEVA</td>
+                            <td class="t-point">55,480</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">13</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">LEE Yu Lim <br>SHIN Seung Chan</td>
+                            <td class="t-point">55,440</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">14</td>
+                            <td class="t-country"><img src="./img/hongkong.png"><br><img src="./img/hongkong.png"></td>
+                            <td class="t-player">YEUNG Nga Ting <br>YEUNG Pui Lam</td>
+                            <td class="t-point">50,504</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">15</td>
+                            <td class="t-country"><img src="./img/thailand.png"><br><img src="./img/thailand.png"></td>
+                            <td class="t-player">Benyapa AIMSAARD <br>Nuntakarn AIMSAARD</td>
+                            <td class="t-point">50,294</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">16</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">JEONG Na Eun <br>KIM Hye Jeong</td>
+                            <td class="t-point">49,690</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">17</td>
+                            <td class="t-country"><img src="./img/thailand.png"><br><img src="./img/thailand.png"></td>
+                            <td class="t-player">Laksika KANLAHA <br>Phataimas MUENWONG</td>
+                            <td class="t-point">48,867</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">18</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">SUNG Shuo Yun <br>YU Chien Hui</td>
+                            <td class="t-point">48,640</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">19</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">HSIEH Pei Shan <br>HUNG En-Tzu</td>
+                            <td class="t-point">48,450</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">20</td>
+                            <td class="t-country"><img src="./img/france.png"><br><img src="./img/france.png"></td>
+                            <td class="t-player">Margot LAMBERT <br>Anne TRAN</td>
+                            <td class="t-point">47,332</td>
+                        </tr>
+                        <tr class="sort25 oceania">
+                            <td class="t-rank">21</td>
+                            <td class="t-country"><img src="./img/australia.png"><br><img src="./img/australia.png">
+                            </td>
+                            <td class="t-player">Setyana MAPASA <br>Angela YU</td>
+                            <td class="t-point">47,180</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">22</td>
+                            <td class="t-country"><img src="./img/india.png"><br><img src="./img/india.png"></td>
+                            <td class="t-player">Tanisha CRASTO <br>Ashwini PONNAPPA</td>
+                            <td class="t-point">47,100</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">23</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">CHANG Ching Hui <br>YANG Ching Tun</td>
+                            <td class="t-point">46,660</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">24</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Maiken FRUERGAARD <br>Sara THYGESEN</td>
+                            <td class="t-point">45,161</td>
+                        </tr>
+                        <tr class="sort25 asia taiwan">
+                            <td class="t-rank">25</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">HSU Yin-Hui <br>LIN Jhih Yun</td>
+                            <td class="t-point">43,990</td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+            <div id="XD" class="tabcontent">
+                <div id="mixed-double-profile" style="display: flex; position: relative;  width:100%;">
+                    <div id="left-mixed-double-profile" style="flex: 1;  ">
+                        <div id="xdplayer1" style="height:50%; display: flex; margin-bottom:10px;">
+                            <img style="height: 150px;" src="./img/FENGYANZHE.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/CHN.png"><br>
+                                <br>
+                                <a href="">FENG Yan Zhe</a>
+                            </div>
+                        </div>
+                        <div id="xdplayer2" style=" height:50%; display: flex;">
+                            <img style="height: 150px;" src="./img/HUANGDONGPING.png">
+                            <div style="text-align: center; width:60%; margin-left:10px;">
+                                <br><br>
+                                <img style="width:107px; height:51px;" src="./img/CHN.png"><br>
+                                <br>
+                                <a href="">HUANG Dong Ping</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="right-mixed-double-profile" style="flex: 2; border:2px black solid;">
+
+                        <!-- 第1層 -->
+                        <div style="text-align: center; display: flex; height:100%;">
+                            <!-- 世界排名 -->
+
+
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>World
+                                    Ranking
+                                    <br><br><strong>1</strong><br><br><br><br>MIXED DOUBLE
+                                </p>
+                            </div>
+                            <!-- 最高排名 -->
+                            <div style="text-align: center; width: 33.3%; background-color: white;">
+                                <p style="flex:1; color:red;margin: 5px 0;">
+                                    <br><br><br><br>POINT<br><br><strong>102300</strong><br><br><br><br>MIXED
+                                    DOUBLE
+                                </p>
+                            </div>
+                            <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                                <p style="flex:1; margin: 5px 0;"><br><br><br><br>WIN RATE(%)
+                                    <br><br><strong>82.2%</strong><br><br><br><br>125W-27L
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 排名表格 -->
+                <div>
+                    <table class="t-all">
+                        <tr id="table-title">
+                            <th class="t-rank">RANK</th>
+                            <th class="t-country">COUNTRY</th>
+                            <th class="t-player">PLAYER</th>
+                            <th class="t-point">POINT</th>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">1</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">FENG Yan Zhe <br>HUANG Dong Ping</td>
+                            <td class="t-point">102,300</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">2</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">JIANG Zhen Bang <br>WEI Ya Xin</td>
+                            <td class="t-point">94,000</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">3</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">CHEN Tang Jie <br>TOH Ee Wei</td>
+                            <td class="t-point">76,390</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">4</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">GOH Soon Huat <br>LAI Shevon Jemie</td>
+                            <td class="t-point">75,070</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">5</td>
+                            <td class="t-country"><img src="./img/hongkong.png"><br><img src="./img/hongkong.png"></td>
+                            <td class="t-player">TANG Chun Man <br>TSE Ying Suet</td>
+                            <td class="t-point">75,070</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">6</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">KIM Won Ho <br>JEONG Na Eun</td>
+                            <td class="t-point">72,540</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">7</td>
+                            <td class="t-country"><img src="./img/thailand.png"><br><img src="./img/thailand.png"></td>
+                            <td class="t-player">Dechapol PUAVARANUKROH <br>Sapsiree TAERATTANACHAI</td>
+                            <td class="t-point">66,210</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">8</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Dejan FERDINANSYAH <br>Gloria Emanuelle WIDJAJA</td>
+                            <td class="t-point">64,430</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">9</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">YANG Po-Hsuan <br>HU Ling Fang</td>
+                            <td class="t-point">64,140</td>
+                        </tr>
+                        <tr class="sort10 asia">
+                            <td class="t-rank">10</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">CHENG Xing <br>ZHANG Chi</td>
+                            <td class="t-point">63,850</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">11</td>
+                            <td class="t-country"><img src="./img/CHN.png"><br><img src="./img/CHN.png"></td>
+                            <td class="t-player">GUO Xin Wa <br>CHEN Fang Hui</td>
+                            <td class="t-point">62,670</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">12</td>
+                            <td class="t-country"><img src="./img/france.png"><br><img src="./img/france.png"></td>
+                            <td class="t-player">Thom GICQUEL <br>Delphine DELRUE</td>
+                            <td class="t-point">59,420</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">13</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Hiroki MIDORIKAWA <br>Natsu SAITO</td>
+                            <td class="t-point">56,350</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">14</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Jesper TOFT <br>Amalie MAGELUND</td>
+                            <td class="t-point">55,500</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">15</td>
+                            <td class="t-country"><img src="./img/netherlands.png"><br><img src="./img/netherlands.png">
+                            </td>
+                            <td class="t-player">Robin TABELING <br>Selena PIEK</td>
+                            <td class="t-point">54,680</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">16</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Rinov RIVALDY <br>Pitha Haningtyas MENTARI</td>
+                            <td class="t-point">53,960</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">17</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">TAN Kian Meng <br>LAI Pei Jing</td>
+                            <td class="t-point">53,640</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">18</td>
+                            <td class="t-country"><img src="./img/malaysia.png"><br><img src="./img/malaysia.png"></td>
+                            <td class="t-player">HOO Pang Ron <br>CHENG Su Yin</td>
+                            <td class="t-point">53,190</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">19</td>
+                            <td class="t-country"><img src="./img/japan.png"><br><img src="./img/japan.png"></td>
+                            <td class="t-player">Yuta WATANABE <br>Arisa IGARASHI</td>
+                            <td class="t-point">52,110</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">20</td>
+                            <td class="t-country"><img src="./img/korea.png"><br><img src="./img/korea.png"></td>
+                            <td class="t-player">SEO Seung Jae <br>CHAE Yu Jung</td>
+                            <td class="t-point">51,600</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">21</td>
+                            <td class="t-country"><img src="./img/indonesia.png"><br><img src="./img/indonesia.png">
+                            </td>
+                            <td class="t-player">Rehan Naufal KUSHARJANTO <br>Lisa Ayu KUSUMAWATI</td>
+                            <td class="t-point">46,770</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">22</td>
+                            <td class="t-country"><img src="./img/chinesetaipei.png"><br><img
+                                    src="./img/chinesetaipei.png"></td>
+                            <td class="t-player">YE Hong Wei <br>LEE Chia Hsin</td>
+                            <td class="t-point">44,810</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">23</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Mads VESTERGAARD <br>Christine BUSCH</td>
+                            <td class="t-point">42,720</td>
+                        </tr>
+                        <tr class="sort25 europe">
+                            <td class="t-rank">24</td>
+                            <td class="t-country"><img src="./img/denmark.png"><br><img src="./img/denmark.png"></td>
+                            <td class="t-player">Mathias CHRISTIANSEN <br>Alexandra BØJE</td>
+                            <td class="t-point">42,450</td>
+                        </tr>
+                        <tr class="sort25 asia">
+                            <td class="t-rank">25</td>
+                            <td class="t-country"><img src="./img/thailand.png"><br><img src="./img/thailand.png"></td>
+                            <td class="t-player">Ruttanapak OUPTHONG <br>Jhenicha SUDJAIPRAPARAT</td>
+                            <td class="t-point">42,450</td>
+                        </tr>
+                    </table>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- 
+    <div id="ad" style="height:200px;width:200px;border:2px solid red; position:fixed; bottom:0px; right:0px; ">
+        <div style=" text-align: right;"><button>X</button></div>
+        <span style="position: absolute; top:0;left:0;">AD</span>
+        <img src="./img/logo-wt.svg" alt="">
+    </div> -->
+    <section style="display: flex; text-align: center; margin-top:100px;">
+        <div style="flex: 1;text-align: right;">
+            <p>Title Sponsor </p>
+            <img src="./img/hsbc_en-01.svg" style=" border-right: 2px solid black;" alt="">
+        </div>
+        <div style="flex: 1; text-align:left ">
+            <img style="width: 40%; margin-top:40px;" src="./img/Etihad.svg" alt="">
+        </div>
+    </section>
+
+    <footer style="background-color: black; color:white;">
+        <div style=" width: 100%; height:500px; display:flex; padding:40px 0;">
+            <div style="width: 25%; flex:1; text-align:left;">
+                <br><br><br><br><br><br>
+                <h3 class="footer-title">QUICK LINKS</h3>
+                <ul>
+                    <li><a href="./homepage.html" class="footer-a">HOME</a></li>
+                    <li><a href="./news.html" class="footer-a">NEWS</a></li>
+                    <li><a href="./ranking.html" class="footer-a">RANKINGS</a></li>
+                    <li><a href="./matchcenter.html" class="footer-a">MATCH CENTER</a></li>
+                    <li><a href="./tool.html" class="footer-a">TOOL</a></li>
+                </ul>
+
+            </div>
+            <div style="width: 25%; flex:1; text-align:left;">
+                <br><br><br><br><br><br>
+                <h3 class="footer-title">Social Media</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/bwfbadminton" class="footer-a">Facebook</a></li>
+                    <li><a href="https://twitter.com/bwfmedia" class="footer-a">X</a></li>
+                    <li><a href="https://www.youtube.com/user/bwf" class="footer-a">Youtube</a></li>
+                    <li><a href="https://soundcloud.com/bwfbadminton/bwf-world-superseries-anthem"
+                            class="footer-a">Soundcloud</a></li>
+
+                </ul>
+            </div>
+            <div style="width: 25%; flex:1; text-align:left;">
+                <br><br><br><br><br><br>
+                <h3 class="footer-title">Website links</h3>
+                <ul>
+                    <li><a href="https://corporate.bwfbadminton.com/" class="footer-a">BWF CORPORATE</a></li>
+                    <li><a href="https://bwfbadminton.com/" class="footer-a">BWF FANSITE</a></li>
+                    <li><a href="http://badmintonworld.tv/" class="footer-a">BADMINTONWORLD.TV</a></li>
+                    <li><a href="https://bwfsudirmancup.bwfbadminton.com/" class="footer-a">BWF Sudirman Cup
+                            Finals</a></li>
+                    <li><a href="https://bwfthomasubercups.bwfbadminton.com/" class="footer-a">BWF Thomas & Uber
+                            Cup</a></li>
+                    <li><a href="https://bwfworldchampionships.bwfbadminton.com/" class="footer-a">BWF World
+                            Championships</a></li>
+                    <li><a href="https://development.bwfbadminton.com/" class="footer-a">DEVELOPMENT</a></li>
+                    <li><a href="https://shuttletime.bwfbadminton.com/" class="footer-a">SHUTTLE TIME</a></li>
+
+
+                </ul>
+
+
+
+
+            </div>
+            <div style="width: 25%;flex:1; text-align:left;">
+                <br><br><br><br><br><br>
+                <h3 class="footer-title">BWF HQ Contact</h3>
+                <pre style=" text-align: left;">
+              Unit No. 1, Level 29
+              Naza Tower Platinum Park
+              No. 10, Persiaran KLCC
+              50088 Kuala Lumpur
+              Malaysia
+                </pre>
+            </div>
+
+        </div>
+        <div style="width: 100%; height:100px; display:flex;">
+            <div style="flex: 1;">
+                &nbsp;
+                <img src="./img/hsbc-master-01.svg">
+            </div>
+
+            <div style="flex: 1;">
+                <br>
+                <h1>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="./img/bwf_logo.png">
+                </h1>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+        const selectElement = document.getElementById("sort");
+        const continent = document.getElementById("continent");
+        continent.addEventListener('change', function () {
+            const continent_value = continent.value;
+            const sortasia = document.getElementsByClassName("asia");
+            const sorttaiwan = document.getElementsByClassName("taiwan");
+            const sorteu = document.getElementsByClassName("europe");
+            const sortam = document.getElementsByClassName("america");
+            const sortaf = document.getElementsByClassName("africa");
+            const sortoc = document.getElementsByClassName("oceania");
+            const selectValue = selectElement.value;
+            const sort10 = document.getElementsByClassName("sort10");
+            const sort25 = document.getElementsByClassName("sort25");
+            const sort100 = document.getElementsByClassName("sort100");
+            var j;
+            if (continent_value == "all") {
+                for (j = 0; j < sort10.length; j++) {
+                    sort10[j].style.display = "";
+                }
+                for (j = 0; j < sort25.length; j++) {
+                    sort25[j].style.display = "";
+                }
+                for (j = 0; j < sort100.length; j++) {
+                    sort100[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "asia") {
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "none";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "none";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "none";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "taiwan") {
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "none";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "none";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "none";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "none";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "europe") {
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "none";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "none";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "none";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "none";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "america") {
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "none";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "none";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "none";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "none";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "africa") {
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "none";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "none";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "none";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "none";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "none";
+                }
+            }
+            else if (continent_value == "oceania") {
+
+                for (j = 0; j < sortasia.length; j++) {
+                    sortasia[j].style.display = "none";
+                }
+                for (j = 0; j < sorttaiwan.length; j++) {
+                    sorttaiwan[j].style.display = "none";
+                }
+                for (j = 0; j < sorteu.length; j++) {
+                    sorteu[j].style.display = "none";
+                }
+                for (j = 0; j < sortam.length; j++) {
+                    sortam[j].style.display = "none";
+                }
+                for (j = 0; j < sortaf.length; j++) {
+                    sortaf[j].style.display = "none";
+                }
+                for (j = 0; j < sortoc.length; j++) {
+                    sortoc[j].style.display = "";
+                }
+            }
+
+
+
+
+
+
+        });
+        selectElement.addEventListener('change', function () {
+            const selectValue = selectElement.value;
+            const sort10 = document.getElementsByClassName("sort10");
+            const sort25 = document.getElementsByClassName("sort25");
+            const sort100 = document.getElementsByClassName("sort100");
+
+            var j;
+            if (selectValue == "10") {
+                for (j = 0; j < sort10.length; j++) {
+                    sort10[j].style.display = "";
+                }
+                for (j = 0; j < sort25.length; j++) {
+                    sort25[j].style.display = "none";
+                }
+                for (j = 0; j < sort100.length; j++) {
+                    sort100[j].style.display = "none";
+                }
+
+            }
+            else if (selectValue == "25") {
+                for (j = 0; j < sort10.length; j++) {
+                    sort10[j].style.display = "";
+                }
+                for (j = 0; j < sort25.length; j++) {
+                    sort25[j].style.display = "";
+                }
+                for (j = 0; j < sort100.length; j++) {
+                    sort100[j].style.display = "none";
+                }
+            }
+        });
+        const sort10 = document.getElementsByClassName("sort10");
+        const sort25 = document.getElementsByClassName("sort25");
+        const sort100 = document.getElementsByClassName("sort100");
+        var j;
+        for (j = 0; j < sort10.length; j++) {
+            sort10[j].style.display = "";
+        }
+        for (j = 0; j < sort25.length; j++) {
+            sort25[j].style.display = "none";
+        }
+        for (j = 0; j < sort100.length; j++) {
+            sort100[j].style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headfooter</title>
+    <link rel="stylesheet" href="./_css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./_css/onepagetab.css">
+    <script src="./_js/bootstrap.bundle.js"></script>
+    <style>
+        .card {
+            background-color: rgba(128, 128, 128, 0.5);
+            color: white;
+        }
+
+        .card:hover {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="py-0 bg-light border-bottom w-100">
+        <div class="row  w-100">
+            <div class="col-lg-10">
+                <ul class="nav me-auto d-none d-lg-flex justify-content-center">
+                    <li class="nav-item"><a href="https://bwfbadminton.com/" class="nav-link link-dark px-2 active"
+                            aria-current="page">BWF Fan
+                            Zone</a>
+                    </li>
+                    <li class="nav-item"><a href="https://bwfworldtour.bwfbadminton.com/"
+                            class="nav-link link-dark px-2">HSBC BWF World
+                            Tour</a></li>
+                    <li class="nav-item"><a href="https://bwfworldtourfinals.bwfbadminton.com/"
+                            class="nav-link link-dark px-2">HSBC BWF
+                            World
+                            Tour Finals</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">more</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item " href="https://bwfsudirmancup.bwfbadminton.com/">TotalEnergies
+                                    BWF Sudirman
+                                    Cup
+                                    Finals</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                    href="https://bwfthomasubercups.bwfbadminton.com/">TotalEnergies BWF Thomas &
+                                    Uber
+                                    Cup Finals</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://olympics.bwfbadminton.com/">Paris 2024
+                                    Olympics</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 px-3 ">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item "><a href="./login.html" class="nav-link link-dark px-2">Login</a></li>
+                    <li class="nav-item "><a href="#" class="nav-link link-dark px-2">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 紅色區域 -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top w-100" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a href=" ./bs5homepage.html">
+                <img style="height: 55px; box-shadow: 5px 1px 1px rgba(0, 0, 0, 0.316);  
+                            border:1px solid rgba(0, 0, 0, 0.601); background-color:white;" src="./img/logo-wt.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse ms-3" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">新聞</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ">世界排名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./calendar.html" class="nav-link">賽事</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">媒體</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-facebook"> Facebook</span></a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-twitter-x"> X</span></a></li>
+                            <li><a class="dropdown-item" href="#"><span class="bi bi-instagram">
+                                        Instagram</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <section style="background-image: url(./img/bg_home_screen.jpg);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <p class="fs-3 text-light">2025 World Tour Calendar</p>
+                </div>
+                <div class="col-6 d-flex justify-content-end mt-auto">
+                    <a href="javascript:void(0)" onclick="remain()" class="btn btn-outline-light">REMAINING</a>
+                    <a href="javascript:void(0)" onclick="completed()" class="btn btn-outline-light">COMPLETED</a>
+                    <a href="javascript:void(0)" onclick="all()" class="btn btn-outline-light">All</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <p class="fs-3 text-light ms-3">January</p>
+        </div>
+
+        <!-- card1 -->
+        <div class="card container-fluid my-3 w-100 completed ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/Malaysia-Open-2025.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex">
+                    <div class="card-body">
+                        <h5 class="card-title">PETRONAS Malaysia Open 2025</h5>
+                        <p class="card-text">
+                            07 - 12 JANUARY
+                        </p>
+                        <p class="card-text">PRIZE MONEY USD $1,450,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_1000.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Kuala Lumpur Malaysia</p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/malaysia.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- card2 -->
+        <div class="card container-fluid my-3 w-100 completed ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/India-Open-2024.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            YONEX-SUNRISE India Open 2025
+                        </h5>
+                        <p class="card-text">
+                            14 - 19 JANUARY
+                        </p>
+                        <p class="card-text">PRIZE MONEY USD $950,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_750.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>New Delhi
+                                India</p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/india.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- card-3 -->
+        <div class="card container-fluid my-3 w-100 completed ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/Indonesia Masters-2025.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+
+                            DAIHATSU Indonesia Masters 2025
+                        </h5>
+                        <p class="card-text">
+                            21 - 26 JANUARY
+                        </p>
+                        <p class="card-text"> PRIZE MONEY USD $475,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_500.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Jakarta
+                                Indonesia</p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/indonesia.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- card-4 -->
+        <div class="card container-fluid my-3 w-100 completed ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/Thailand Masters-2025.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+
+                            PRINCESS SIRIVANNAVARI Thailand Masters 2025
+
+
+
+                            Patumwan
+                            Thailand
+
+                        </h5>
+                        <p class="card-text">
+                            28 JANUARY - 02 FEBRUARY
+                        </p>
+                        <p class="card-text"> PRIZE MONEY USD $240,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_300.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Patumwan
+                                Thailand</p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/thailand.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <p class="fs-3 text-light ms-3">February</p>
+        </div>
+        <div class="container-fluid">
+            <p class="text-danger text-center fs-3">Next Tournament</p>
+            <p id="countdown" class="text-center text-light"></p>
+        </div>
+        <!-- card-5 -->
+        <div class="card container-fluid  w-100 remain ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+
+                    <img src="./img/gameopenimg/German-Open-2025.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">
+                            YONEX German Open 2025
+                        </h5>
+                        <p class="card-text">
+                            25 FEBRUARY - 02 MARCH </p>
+                        <p class="card-text"> PRIZE MONEY USD $240,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6 ">
+                    <img class="img-fluid" src="./img/WT_300.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>
+                                Mülheim an der Ruhr
+                                Germany
+                            </p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/germany.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <p class="fs-3 text-light ms-3">March</p>
+        </div>
+        <!-- card-6 -->
+        <div class="card container-fluid my-3 w-100 remain ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/Orleans-Masters-2024.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+
+
+                            Orleans Masters Badminton 2025 presented by VICTOR
+
+
+
+
+
+                        </h5>
+                        <p class="card-text">
+                            04 - 09 MARCH
+                        </p>
+                        <p class="card-text"> PRIZE MONEY USD $240,000</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_300.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Orléans
+                                France
+                            </p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/france.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card-7 -->
+        <div class="card container-fluid my-3 w-100 remain ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/All-England-2025.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            YONEX All England Open Badminton Championships 2025
+                        </h5>
+                        <p class="card-text">
+                            11 - 16 MARCH
+                        </p>
+                        <p class="card-text"> PRIZE MONEY USD $1,450,000
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_300.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p> Birmingham
+                                England
+
+                            </p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/england.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- card-7 -->
+        <div class="card container-fluid my-3 w-100 remain ">
+            <div class="row g-0">
+                <div class="col-md-2 col-6">
+                    <img src="./img/gameopenimg/Swiss Open-2025.svg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-6 d-none d-md-flex ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            YONEX Swiss Open 2025
+
+
+
+
+                        </h5>
+                        <p class="card-text">
+                            18 - 23 MARCH
+                        </p>
+                        <p class="card-text"> PRIZE MONEY USD $250,000
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <img class="img-fluid" src="./img/WT_300.svg" alt="">
+                    <div class="row">
+                        <div class="col-6">
+                            <p> Basel
+                                Switzerland
+
+
+                            </p>
+                        </div>
+                        <div class="col-6">
+
+                            <img src="./img/switzerland.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <p class="fs-3 text-light ms-3">April</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    </section>
+
+
+    <section>
+        <div class="container-fluid text-bg-dark w-100 d-flex justify-content-around">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5  border-top ">
+
+
+                <div class="col mb-3 ">
+                    <h5>QUICK LINKS</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">NEWS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">RANKINGS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">MATCH CENTER</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">TOOL</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Social Media</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://www.facebook.com/bwfbadminton"
+                                class="nav-link p-0 text-muted">Facebook</a></li>
+                        <li class="nav-item mb-2"><a href="https://twitter.com/bwfmedia"
+                                class="nav-link p-0 text-muted">X</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.youtube.com/user/bwf"
+                                class="nav-link p-0 text-muted">Youtube</a></li>
+                        <li class="nav-item mb-2"><a
+                                href="https://soundcloud.com/bwfbadminton/bwf-world-superseries-anthem"
+                                class="nav-link p-0 text-muted">Soundcloud</a></li>
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>Website links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://corporate.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF CORPORATE</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF FANSITE</a></li>
+                        <li class="nav-item mb-2"><a href="http://badmintonworld.tv/"
+                                class="nav-link p-0 text-muted">BADMINTONWORLD.TV</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfsudirmancup.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">BWF Sudirman Cup</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfthomasubercups.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">TotalEnergies BWF Thomas & Uber Cup Finals</a></li>
+                        <li class="nav-item mb-2"><a href="https://bwfworldchampionships.bwfbadminton.com/"
+                                class="nav-link p-0 text-muted">TotalEnergies BWF World Championships</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col mb-3">
+                    <h5>BWF HQ Contact</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Unit No. 1, Level 29</li>
+                        <li class="nav-item mb-2">Naza Tower Platinum Park</li>
+                        <li class="nav-item mb-2">No. 10, Persiaran KLCC</li>
+                        <li class="nav-item mb-2">50088 Kuala Lumpur</li>
+                        <li class="nav-item mb-2">Malaysia</li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+
+                </div>
+                <p class="text-muted">&copy; 2025</p>
+            </footer>
+        </div>
+        <script>
+
+            // Set the date we're counting down to
+            var countDownDate = new Date("Feb 25, 2025 15:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Output the result in an element with id="demo"
+                countdown.innerHTML = days + "d " + hours + "h "
+                    + minutes + "m " + seconds + "s ";
+
+                // If the count down is over, write some text 
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "比賽開幕";
+                }
+            }, 1000);
+            const remain_items = document.getElementsByClassName("remain");
+            const completed_items = document.getElementsByClassName("completed");
+            console.log(remain_items[0].style.display)
+            function remain() {
+                for (let i = 0; i < remain_items.length; i++) {
+                    remain_items[i].style.display = '';
+                }
+                for (let j = 0; j < completed_items.length; j++) {
+                    completed_items[j].style.display = 'none';
+                }
+            }
+
+            function completed() {
+                for (let i = 0; i < remain_items.length; i++) {
+                    remain_items[i].style.display = 'none';
+                }
+                for (let j = 0; j < completed_items.length; j++) {
+                    completed_items[j].style.display = '';
+                }
+            }
+
+            function all() {
+                for (let i = 0; i < remain_items.length; i++) {
+                    remain_items[i].style.display = '';
+                }
+                for (let j = 0; j < completed_items.length; j++) {
+                    completed_items[j].style.display = '';
+                }
+            }
+
+        </script>
+    </section>
+</body>
+
+</html>

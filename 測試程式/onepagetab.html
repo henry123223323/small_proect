@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        /* Set height of body and the document to 100% to enable "full page tabs" */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 25%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: white;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+
+        #Home {
+            background-color: red;
+        }
+
+        #News {
+            background-color: green;
+        }
+
+        #Contact {
+            background-color: blue;
+        }
+
+        #About {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')">News</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'blue')" id="defaultOpen">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+    <div id="Home" class="tabcontent" style="width: 100%;">
+        <div style="display: flex; position: relative; border: 1px solid #ccc; width:100%; margin:2px; padding: 20px;">
+            <!-- 左側圖像 -->
+            <div style="flex: 1; position: relative;">
+                <img src="https://img.bwfbadminton.com/image/upload/t_96_player_profile_portrait/v1697434141/assets/players/thumbnail/57945.png"
+                    alt="SHI Yu Qi" style="width: 100%; height: auto; border-radius: 10px;">
+            </div>
+
+            <!-- 右側資訊 -->
+            <div style="flex: 2; padding-left: 20px;">
+                <h2 style="margin: 0;">SHI Yu Qi</h2>
+                <p style="margin: 5px 0;"><img src="https://extranet.bwf.sport/docs/flags/CHN.png" alt="China"
+                        style="width: 20px; height: auto;"> China</p>
+                <p style="margin: 5px 0;">World Ranking: <strong>1</strong></p>
+                <p style="margin: 5px 0;">Age: <strong>28</strong></p>
+                <p style="margin: 5px 0;">Career Wins: <strong>319</strong></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="News" class="tabcontent">
+        <div id="double-profile" style="display: flex; position: relative;  width:100%;">
+            <div id="left-double-profile" style="flex: 1;  ">
+                <div id="xdplayer1" style="height:50%; display: flex; margin-bottom:10px;">
+                    <img style="height: 150px;" src="../img/anseyongno1.jpg">
+                    <div style="text-align: center; width:60%; margin-left:10px;">
+                        <br><br>
+                        <img style="width:107px; height:51px;" src="../img/korea.png"><br>
+                        <br><br>
+                        <a href="">AN Se Young</a>
+                    </div>
+                </div>
+                <div id="xdplayer2" style=" height:50%; display: flex;">
+                    <img style="height: 150px;" src="../img/anseyongno1.jpg">
+                    <div style="text-align: center; width:60%; margin-left:10px;">
+                        <br><br>
+                        <img style="width:107px; height:51px;" src="../img/korea.png"><br>
+                        <br><br>
+                        <a href="">AN Se Young</a>
+                    </div>
+                </div>
+            </div>
+            <div id="right-double-profile" style="flex: 2; border:2px black solid;">
+
+                <!-- 第1層 -->
+                <div style="text-align: center; display: flex; height:100%;">
+                    <!-- 世界排名 -->
+                    <!-- <div style="height: 33.3%;"></div> -->
+
+                    <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                        <p style="flex:1; margin: 5px 0;"><br><br><br><br>World
+                            Ranking
+                            <br><br><strong>1</strong><br><br><br><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <!-- 最高排名 -->
+                    <div style="text-align: center; width: 33.3%; background-color: white;">
+                        <p style="flex:1; color:red;margin: 5px 0;">
+                            <br><br><br><br>POINT<br><br><strong>100000</strong><br><br><br><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <div style=" width:33.3%; background-color: rgb(223, 32, 39); ">
+                        <p style="flex:1; margin: 5px 0;"><br><br><br><br>World
+                            Ranking
+                            <br><br><strong>1</strong><br><br><br><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                </div>
+                <!-- <div style="height: 33.3%;"></div> -->
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <div id="double-profile" style="display: flex; position: relative;  width:100%;">
+            <div id="left-double-profile" style="flex: 1;  ">
+                <div id="xdplayer1" style="height:50%; display: flex; margin-bottom:10px;">
+                    <img style="height: 150px;" src="../img/anseyongno1.jpg">
+                    <div style="text-align: center; width:60%; margin-left:10px;">
+                        <br><br>
+                        <img style="width:107px; height:51px;" src="../img/korea.png"><br>
+                        <br><br>
+                        <a href="">AN Se Young</a>
+                    </div>
+                </div>
+                <div id="xdplayer2" style=" height:50%; display: flex;">
+                    <img style="height: 150px;" src="../img/anseyongno1.jpg">
+                    <div style="text-align: center; width:60%; margin-left:10px;">
+                        <br><br>
+                        <img style="width:107px; height:51px;" src="../img/korea.png"><br>
+                        <br><br>
+                        <a href="">AN Se Young</a>
+                    </div>
+                </div>
+            </div>
+            <div id="right-double-profile" style="flex: 2; border:2px black solid;">
+
+                <!-- 第1層 -->
+                <div style="text-align: center; display: flex; height:50%;">
+                    <!-- 世界排名 -->
+                    <div style=" width:50%; background-color: rgb(223, 32, 39); ">
+                        <p style="flex:1; margin: 5px 0;"><br>World
+                            Ranking
+                            <br><strong>1</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <!-- 最高排名 -->
+                    <div style="text-align: center; width: 50%; background-color: white;">
+                        <p style="flex:1; color:red;margin: 5px 0;">
+                            <br>POINT<br><strong>100000</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+
+
+                </div>
+                <!-- 第2層 -->
+                <div style="height:50%; display:flex">
+
+                    <div style=" width:33.3%;  ">
+                        <p style="flex:1; margin: 5px 0;text-align: center;"><br>CAREER WINS
+                            <br><strong>319</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <!-- 最高排名 -->
+                    <div style="text-align: center; width: 33.3%; ">
+                        <p style="flex:1; margin: 5px 0;"><br>AGE<br><strong>28</strong><br>28/02/1996
+                        </p>
+                    </div>
+                    <div style="text-align: center; width: 33.3%; ">
+                        <p style="flex:1; margin: 5px 0;">
+                            <br>PLAYS<br><strong><img src="../img/player-right-hand.svg" alt=""></strong>
+                        </p>
+                    </div>
+
+                    <!-- <p style="margin: 5px 0;">POINT: <strong>92128</strong></p>
+                    <p style="margin: 5px 0;">Age: <strong>28</strong></p>
+                    <p style="margin: 5px 0;">Career Wins: <strong>319</strong></p> -->
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="About" class="tabcontent">
+
+        <div style="display: flex; position: relative;  width:100%;">
+            <!-- 左側圖像 -->
+            <div style="flex: 2; position: relative;">
+                <img src="https://img.bwfbadminton.com/image/upload/t_96_player_profile_portrait/v1697434141/assets/players/thumbnail/57945.png"
+                    alt="SHI Yu Qi" style="width: 100%; height: auto; border-radius: 10px;">
+            </div>
+
+            <!-- 右側資訊 -->
+            <div style="flex: 5; padding-left: 20px; ">
+                <!-- 第一排 -->
+                <div style="height:20%; display: flex; ">
+                    <div style="flex: 1;">
+
+                        <img src="./img/CHN.png" alt="China" style=" border:1px solid black;">
+
+                    </div>
+                    <div style="flex: 2; display:inline; margin:10px;">
+                        <h2 style="margin: 0;">SHI Yu Qi</h2>
+                    </div>
+                    <div style="flex: 8; text-align:right;">
+                        <button style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
+                            FULL
+                            BWF
+                            PROFILE</button>
+                    </div>
+                </div>
+                <!-- 第二層 -->
+                <div style="text-align: center; display: flex; height:40%;">
+                    <!-- 世界排名 -->
+                    <div style=" width:50%; background-color: rgb(223, 32, 39); ">
+                        <p style="flex:1; margin: 5px 0;"><br>World
+                            Ranking
+                            <br><strong>1</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <!-- 最高排名 -->
+                    <div style="text-align: center; width: 50%; background-color: white;">
+                        <p style="flex:1; color:red;margin: 5px 0;">
+                            <br>POINT<br><strong>100000</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+
+
+                </div>
+                <!-- 第三層 -->
+                <div style="height:40%; display:flex">
+
+                    <div style=" width:33.3%;  ">
+                        <p style="flex:1; margin: 5px 0;text-align: center;"><br>CAREER WINS
+                            <br><strong>319</strong><br>MEN'S
+                            SINGLE
+                        </p>
+                    </div>
+                    <!-- 最高排名 -->
+                    <div style="text-align: center; width: 33.3%; ">
+                        <p style="flex:1; margin: 5px 0;"><br>AGE<br><strong>28</strong><br>28/02/1996
+                        </p>
+                    </div>
+                    <div style="text-align: center; width: 33.3%; ">
+                        <p style="flex:1; margin: 5px 0;">
+                            <br>PLAYS<br><strong><img src="../img/player-right-hand.svg" alt=""></strong>
+                        </p>
+                    </div>
+
+                    <!-- <p style="margin: 5px 0;">POINT: <strong>92128</strong></p>
+                    <p style="margin: 5px 0;">Age: <strong>28</strong></p>
+                    <p style="margin: 5px 0;">Career Wins: <strong>319</strong></p> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>

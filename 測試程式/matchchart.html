@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>32 強到決賽樹狀圖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tree {
+            display: flex;
+            align-items: center;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .match {
+            width: 150px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            margin: 10px 0;
+            position: relative;
+        }
+
+        .line {
+            position: absolute;
+            background: #ccc;
+        }
+
+        .line.vertical {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .line.horizontal {
+            height: 2px;
+            width: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .connector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tree">
+        <!-- 32 強 -->
+        <div class="round">
+            <div class="match">32-1</div>
+            <div class="match">32-2</div>
+            <div class="match">32-3</div>
+            <div class="match">32-4</div>
+            <div class="match">32-5</div>
+            <div class="match">32-6</div>
+            <div class="match">32-7</div>
+            <div class="match">32-8</div>
+            <div class="match">32-9</div>
+            <div class="match">32-10</div>
+            <div class="match">32-11</div>
+            <div class="match">32-12</div>
+            <div class="match">32-13</div>
+            <div class="match">32-14</div>
+            <div class="match">32-15</div>
+            <div class="match">32-16</div>
+        </div>
+
+        <!-- 16 強 -->
+        <div class="round">
+            <div class="match">16-1</div>
+            <div class="match">16-2</div>
+            <div class="match">16-3</div>
+            <div class="match">16-4</div>
+            <div class="match">16-5</div>
+            <div class="match">16-6</div>
+            <div class="match">16-7</div>
+            <div class="match">16-8</div>
+        </div>
+
+        <!-- 8 強 -->
+        <div class="round">
+            <div class="match">8-1</div>
+            <div class="match">8-2</div>
+            <div class="match">8-3</div>
+            <div class="match">8-4</div>
+        </div>
+
+        <!-- 4 強 -->
+        <div class="round">
+            <div class="match">4-1</div>
+            <div class="match">4-2</div>
+        </div>
+
+        <!-- 決賽 -->
+        <div class="round">
+            <div class="match">決賽</div>
+        </div>
+    </div>
+</body>
+
+</html>
