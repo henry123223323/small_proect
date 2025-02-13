@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./_css/onepagetab.css">
     <script src="./_js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -106,6 +111,48 @@
         </div>
     </nav>
 
+    <section style="margin-top:  100px; ;">
+        <table id="table" class="table table-bordered table-danger">
+            <tr>
+                <th style="width: 20px;">serve</th>
+                <th>name</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <td><img src="./img/badmintonball.jpg" id="img_a" width="20px" height="20px"></td>
+                <td id="A_name">A</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td><img src="./img/badmintonball.jpg" id="img_b" width="20px" height="20px"
+                        style="visibility: hidden;"></td>
+                <td id="B_name">B</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </section>
+    <section id="controler">
+        <div class="d-flex justify-content-evenly">
+            <button style="border-radius: 50px;" id="btn_a" onclick="A_point()">A隊得分</button>
+            <button style="border-radius: 50px;" id="btn_b" onclick="B_point()">B隊得分</button>
+
+        </div>
+        <div class="d-flex justify-content-evenly">
+
+            <button style="border-radius: 50px;" id="btn_reset" onclick="reset()" disabled>重製賽局</button>
+        </div>
+
+
+    </section>
+    <section>
+        <canvas id="line_chart" style="margin:10px 200px 200px 200px ; "></canvas>
+    </section>
 
 
 
@@ -119,7 +166,7 @@
 
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 
 
@@ -198,6 +245,266 @@
         </div>
 
     </section>
+
+
+    <script>
+        let inning = 1;
+        let a_point = 0;
+        let b_point = 0;
+        let a_wininning = 0;
+        let b_wininning = 0;
+
+
+
+        // 选取 A 队每一局的分数元素
+        const a_inning1 = A_name.nextElementSibling;
+        const a_inning2 = a_inning1.nextElementSibling;
+        const a_inning3 = a_inning2.nextElementSibling;
+
+        // 选取 B 队每一局的分数元素
+        const b_inning1 = B_name.nextElementSibling;
+        const b_inning2 = b_inning1.nextElementSibling;
+        const b_inning3 = b_inning2.nextElementSibling;
+
+        let ctx = line_chart.getContext('2d')
+
+        let scoreChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [0],
+                datasets: [
+                    { label: A_name.innerText, borderColor: 'blue', data: [0], fill: false },
+                    { label: B_name.innerText, borderColor: 'red', data: [0], fill: false }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: { x: { title: { display: true, text: '總分' } }, y: { title: { display: true, text: '當前得分' } } }
+            }
+        });
+
+        // A 队名可编辑
+        A_name.addEventListener("dblclick", function () {
+            let text = this.innerText;
+            let input = document.createElement("input");
+            input.type = "text";
+            input.value = text;
+            input.style.width = this.offsetWidth + "px";
+
+            let originalElement = this;
+            originalElement.replaceWith(input);
+            input.focus();
+
+            function save() {
+                originalElement.innerText = input.value || text;
+                input.replaceWith(originalElement);
+                btn_a.innerText = `${originalElement.innerText}得分`;
+                scoreChart.data.datasets[0].label = originalElement.innerText
+
+                scoreChart.update()
+
+            }
+
+            input.addEventListener("blur", save);
+            input.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    save();
+
+
+                }
+            });
+        });
+
+        // B 队名可编辑
+        B_name.addEventListener("dblclick", function () {
+            let text = this.innerText;
+            let input = document.createElement("input");
+            input.type = "text";
+            input.value = text;
+            input.style.width = this.offsetWidth + "px";
+
+            let originalElement = this;
+            originalElement.replaceWith(input);
+            input.focus();
+
+            function save() {
+                originalElement.innerText = input.value || text;
+                input.replaceWith(originalElement);
+                btn_b.innerText = `${originalElement.innerText}得分`;
+                scoreChart.data.datasets[1].label = originalElement.innerText
+                scoreChart.update()
+
+
+            }
+
+            input.addEventListener("blur", save);
+            input.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                    save();
+
+                }
+            });
+        });
+
+        // A 队得分
+        function A_point() {
+            a_point++;
+            img_b.style.visibility = "hidden"
+            img_a.style.visibility = "visible"
+            switch (inning) {
+                case 1:
+                    a_inning1.textContent = a_point;
+                    break;
+                case 2:
+                    a_inning2.textContent = a_point;
+                    break;
+                case 3:
+                    a_inning3.textContent = a_point;
+                    break;
+            }
+            scoreChart.data.labels.push(a_point + b_point);
+            scoreChart.data.datasets[0].data.push(a_point);
+            scoreChart.data.datasets[1].data.push(b_point);
+            scoreChart.update()
+            checkwininning()
+        }
+
+        // B 队得分
+        function B_point() {
+            b_point++;
+            img_a.style.visibility = "hidden"
+            img_b.style.visibility = "visible"
+
+            switch (inning) {
+                case 1:
+                    b_inning1.textContent = b_point;
+                    break;
+                case 2:
+                    b_inning2.textContent = b_point;
+                    break;
+                case 3:
+                    b_inning3.textContent = b_point;
+                    break;
+            }
+            scoreChart.data.labels.push(a_point + b_point);
+            scoreChart.data.datasets[0].data.push(a_point);
+            scoreChart.data.datasets[1].data.push(b_point);
+            scoreChart.update()
+            checkwininning()
+        }
+        function clearscorechart() {
+            scoreChart.data.labels = [0]
+            scoreChart.data.datasets[0].data = [0]
+            scoreChart.data.datasets[1].data = [0]
+        }
+        function gameend() { // 比赛结束时禁用按钮
+            btn_a.disabled = true;
+            btn_b.disabled = true;
+            btn_reset.disabled = false;
+            a_point = 0
+            b_point = 0
+            a_wininning = 0
+            b_wininning = 0
+            inning = 1
+
+
+        }
+        //判斷是否進入下一局
+        function checkwintwoinning() {
+            clearscorechart()
+
+            if (inning == 3) {
+                if (a_wininning == 2) {
+                    alert(`${A_name.innerText}贏得了這場比賽`)
+                }
+                else {
+                    alert(`${B_name.innerText}贏得了這場比賽`)
+
+                }
+                gameend()
+            }
+            else if (inning == 2) {
+                if (a_wininning == 2) {
+                    alert(`${A_name.innerText}贏得了這場比賽`)
+                    gameend()
+
+                }
+                else if (b_wininning == 2) {
+                    alert(`${B_name.innerText}贏得了這場比賽`)
+                    gameend()
+                }
+                else {
+                    inning++
+
+
+                }
+            }
+            else {
+                inning++
+                img_a.style.visibility = "hidden"
+                img_b.style.visibility = "visible"
+            }
+        }
+        // 检查是否结束
+        function checkwininning() {//檢查此局是否有獲勝者了
+            if (a_point >= 21 || b_point >= 21) {
+                if (Math.abs(a_point - b_point) >= 2) {
+                    if (a_point > b_point) {
+                        a_wininning++
+                        alert(`${A_name.innerText}贏得了這局`)
+                        checkwintwoinning()
+                        a_point = 0
+                        b_point = 0
+                    }
+                    else {
+                        b_wininning++
+                        alert(`${B_name.innerText}贏得了這局`)
+                        checkwintwoinning()
+                        a_point = 0
+                        b_point = 0
+                    }
+                }
+                else {
+                    if (a_point == 30) {
+                        a_wininning++
+
+
+                        alert(`${A_name.innerText}贏得了這局`)
+                        checkwintwoinning()
+                        a_point = 0
+                        b_point = 0
+                    }
+                    else if (b_point == 30) {
+                        b_wininning++
+
+
+                        alert(`${B_name.innerText}贏得了這局`)
+                        checkwintwoinning()
+                        a_point = 0
+                        b_point = 0
+                    }
+                }
+            }
+        }
+
+        function reset() {
+            btn_a.disabled = false;
+            btn_b.disabled = false;
+            btn_reset.disabled = true;
+            a_inning1.textContent = 0
+            a_inning2.textContent = 0
+            a_inning3.textContent = 0
+            b_inning1.textContent = 0
+            b_inning2.textContent = 0
+            b_inning3.textContent = 0
+            clearscorechart()
+            scoreChart.update()
+
+
+        }
+
+
+    </script>
 </body>
 
 </html>
