@@ -1,0 +1,74 @@
+[
+    {
+        "pid": "P01",
+        "name": "ARCSABER 2 ABILITY",
+        "brand": "Yonex",
+        "price": 2200,
+        "quantity": 6,
+        "image": "https://yonexshop.tw/photo/BDRC/ARC2AGE/z-ARC2AGE_181-1.jpg?1731911914"
+    },
+    {
+        "pid": "P02",
+        "name": "ARCSABER 2 CLEAR",
+        "brand": "Yonex",
+        "price": 2200,
+        "quantity": 6,
+        "image": "https://yonexshop.tw/photo/BDRC/ARC2CGE/z-ARC2CGE_188-1.jpg?1731911983"
+    },
+    {
+        "pid": "P03",
+        "name": "NANOFLARE 1000Z",
+        "brand": "Yonex",
+        "price": 8900,
+        "quantity": 6,
+        "image": "https://yonexshop.tw/photo/BDRC/NF-1000ZYX/z-NF-1000ZYX_824-1.jpg?1684828926"
+    },
+    {
+        "pid": "P04",
+        "name": "Axforce 雷霆 100 麒麟 黑金",
+        "brand": "Li-Ning",
+        "price": 8700,
+        "quantity": 60,
+        "image": "https://cdn.cybassets.com/media/W1siZiIsIjEwMTAwL3Byb2R1Y3RzL2M1MWEyODdhNzI3OGE4YjM3MDIwYzRkYmEyOTZjZDNjYTcyYmM4NjYwN2Y0MTdjZTA1ZWFiMzEyM2RiOTI2ZDIuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=56743238cc984ebc"
+    },
+    {
+        "pid": "P05",
+        "name": "Bladex 鋒影 900 NEW 螢光莓紅",
+        "brand": "Li-Ning",
+        "price": 8200,
+        "quantity": 30,
+        "image": "https://cdn.cybassets.com/media/W1siZiIsIjEwMTAwL3Byb2R1Y3RzLzJiM2Q4ZmNiNWE0MGU0YjVhMzkxOWUwNjM4OTczMjdkY2I0NjVlMmU4NGJiY2Y2Yzc1NTlkMGRkOGYyODdkMzQuanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=8306834c8b5643af"
+    },
+    {
+        "pid": "P06",
+        "name": "Halbertec 戰戟 9000 綠紫",
+        "brand": "Li-Ning",
+        "price": 7900,
+        "quantity": 30,
+        "image": "https://cdn.cybassets.com/media/W1siZiIsIjEwMTAwL3Byb2R1Y3RzLzEzNGFhMmJjYmUwYzcwZTkyYWMyOTU0NWMwNzkxMmQ5ZWMwNmY4YmI0ODRhODEzNGYzNGNjOGQzNzBlNGUwOTguanBlZyJdLFsicCIsInRodW1iIiwiNjAweDYwMCJdXQ.jpeg?sha=7b92f04b985e21cc"
+    },
+    {
+        "pid": "P07",
+        "name": "戴資穎致敬系列羽球拍 突擊 TK-TTY Ultima A",
+        "brand": "VICTOR",
+        "price": 8000,
+        "quantity": 30,
+        "image": "https://www.victorsport.com.tw/files/zh_tw/product/more/123243_0_20241108162403.jpg"
+    },
+    {
+        "pid": "P08",
+        "name": "塞提阿萬特別版簽名拍 神速 ARS-HS PLUS HENDRA C",
+        "brand": "VICTOR",
+        "price": 9800,
+        "quantity": 30,
+        "image": "https://www.victorsport.com.tw/files/zh_tw/product/more/132215_0_20250121091401.jpg"
+    },
+    {
+        "pid": "P09",
+        "name": "2024 BWF 世界巡迴賽總決賽紀念羽球拍 神速 ARS-100X Ultra Q",
+        "brand": "VICTOR",
+        "price": 8000,
+        "quantity": 30,
+        "image": "https://www.victorsport.com.tw/files/zh_tw/product/more/127207_0_20241209105848.jpg"
+    }
+]
