@@ -11,6 +11,10 @@
     width: 20%;
 }
 
+.dropdown-menu.show {
+    z-index: 1021;
+}
+
 .tablink:hover {
     background-color: #777;
 }
