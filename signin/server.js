@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // 設定 JSON 檔案路徑
-const FILE_PATH = "email_password.json";
+const FILE_PATH = "signin/email_password.json";
 
 // 處理 POST 請求，儲存 Email 和 Password
 app.post("/save", (req, res) => {
