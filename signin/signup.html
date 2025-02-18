@@ -55,6 +55,22 @@
             padding: 100px 20px;
             height: 100%;
         }
+
+        @media (min-width: 576px) {
+
+            #Login,
+            #Signin {
+                width: 480px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            #Login,
+            #Signin {
+                width: 300px;
+            }
+        }
     </style>
 </head>
 
@@ -64,10 +80,9 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="d-lg-none d-flex col-3"></div>
-            <div class="col-md-6 d-none d-lg-flex">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner my-2">
+            <div class="col-md-5 d-none d-lg-flex">
+                <div id="carouselExampleSlidesOnly" class="carousel slide h-100" data-bs-ride="carousel">
+                    <div class="carousel-inner my-auto">
                         <div class="carousel-item active" data-bs-interval="2000">
                             <img src="../img/choutienchen.jpg" class="d-block w-100" alt="...">
                         </div>
@@ -80,9 +95,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 col-12 me-auto">
-                <div class="position-absolute"
-                    style="top: 70px; width:500px; height: 80%; border-radius: 30px;  overflow: hidden;">
+            <div class="col-md-7 col-12 mx-auto width:520px d-flex justify-content-center">
+                <div class="position-absolute" style=" top: 70px;   border-radius: 30px;  overflow: hidden;">
                     <button class="tablink" onclick="openPage('Login', this, 'green')" id="defaultOpen">登入</button>
                     <button class="tablink" onclick="openPage('Signin', this, 'green')">註冊</button>
                     <div id="Login" class="tabcontent">

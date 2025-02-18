@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/onepagetab.css">
     <script src="./js/bootstrap.bundle.js"></script>
+    <style>
+        .card {
+            background-color: rgba(128, 128, 128, 0.5);
+            color: white;
+        }
+
+        .card:hover {
+            background-color: transparent;
+        }
+    </style>
 </head>
 
 <body>
+
     <header class="py-0 bg-light border-bottom w-100">
         <div class="row  w-100">
             <div class="col-lg-10">
@@ -110,21 +121,32 @@
         </div>
     </nav>
 
+    <section style="background-image: url(./img/bg_home_screen.jpg);">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 mt-5">
+                    <p class="fs-3 text-light">2025 World Tour Calendar</p>
+                </div>
+                <div class="col-6 d-flex justify-content-end mt-auto">
+                    <a href="javascript:void(0)" onclick="remain()" class="btn btn-outline-light">REMAINING</a>
+                    <a href="javascript:void(0)" onclick="completed()" class="btn btn-outline-light">COMPLETED</a>
+                    <a href="javascript:void(0)" onclick="All()" class="btn btn-outline-light">All</a>
+                </div>
+            </div>
+        </div>
+        <div class="completed" id="complete">
+
+        </div>
+        <div class="container-fluid">
+            <p class="text-danger text-center fs-3">Next Tournament</p>
+            <p id="countdown" class="text-center text-light"></p>
+        </div>
+        <div class="remain" id="remain_id">
+
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
+    </section>
 
 
     <section>
@@ -198,8 +220,164 @@
                 <p class="text-muted">&copy; 2025</p>
             </footer>
         </div>
-
     </section>
+
+
+    <script>
+        fetch('./calendar.json')
+            .then(
+                response => response.json())
+            .then(json => {
+                console.log("hi")
+                let html = ''
+                let remain_html = ''
+                json.forEach((items, index) => {
+                    if (index > 3) {
+                        remain_html += `
+                <div class="card container-fluid my-3 w-100">
+                    <div class="row g-0">
+                        <div class="col-md-2 col-sm-2 col-12">
+                            <img src="${items.image}" class="w-100 rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-12 d-flex justify-content-center">
+                            <div class="card-body">
+                                <div class="card-title d-flex  row w-100">
+                                    <div class="col-12 col-md-6">
+                                        <h5>${items.sponsor} &nbsp;</h5>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5>${items.name}</h5>
+                                    </div>
+                                </div>
+                                <p class="card-text">
+                                    ${items.date}
+                                </p>
+                                <p class="card-text">${items.price}</p>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center col-md-4 d-md-block">
+                            <img class="img-fluid" src="${items.level}" alt="">
+                            <div class="row d-none d-sm-flex">
+                            <div class="col-6">
+                                <div>
+                                    <h5>${items.city} &nbsp;</h5>
+                                </div>
+                                <div>
+                                    <h5>${items.country}</h5>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <img src="${items.country_img}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `
+                    }
+                    else {
+                        html += `
+                <div class="card container-fluid my-3 w-100">
+                    <div class="row g-0">
+                        <div class="col-md-2 col-sm-2 col-12">
+                            <img src="${items.image}" class="w-100 rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-12 d-flex justify-content-center">
+                            <div class="card-body">
+                                <div class="card-title d-flex  row w-100">
+                                    <div class="col-12 col-md-6">
+                                        <h5>${items.sponsor} &nbsp;</h5>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <h5>${items.name}</h5>
+                                    </div>
+                                </div>
+                                <p class="card-text">
+                                    ${items.date}
+                                </p>
+                                <p class="card-text">${items.price}</p>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center col-md-4 d-md-block">
+                            <img class="img-fluid" src="${items.level}" alt="">
+                            <div class="row d-none d-sm-flex">
+                            <div class="col-6">
+                                <div>
+                                    <h5>${items.city} &nbsp;</h5>
+                                </div>
+                                <div>
+                                    <h5>${items.country}</h5>
+                                </div>
+                            </div>
+                            <div class="col-6 ">
+                                <img src="${items.country_img}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `}
+                })
+                complete.innerHTML = html
+                remain_id.innerHTML = remain_html
+            })
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Feb 25, 2025 15:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            countdown.innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "比賽開幕";
+            }
+        }, 1000);
+        const remain_items = document.querySelector('.remain');
+        const completed_items = document.querySelector('.completed');
+
+
+
+        function All() {
+
+            remain_items.style.display = "block"
+            completed_items.style.display = "block"
+        }
+
+
+        function remain() {
+            remain_items.style.display = "block"
+            completed_items.style.display = "none"
+
+
+        }
+
+        function completed() {
+            remain_items.style.display = "none"
+            completed_items.style.display = "block"
+
+        }
+
+
+
+    </script>
 </body>
 
 </html>

@@ -32,7 +32,15 @@
             user-select: none;
         }
 
+        @media (max-width: 576px) {
+            .profile {
+                font-size: small;
+            }
 
+            strong {
+                font-size: 30px;
+            }
+        }
 
         @media (min-width: 768px) {
             .bd-placeholder-img-lg {
@@ -138,7 +146,7 @@
         </div>
     </header>
     <!-- 紅色區域 -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-danger sticky-top w-100" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top w-100" aria-label="Fourth navbar example">
         <div class="container-fluid">
             <a href=" ./index.html">
                 <img style="height: 55px; box-shadow: 5px 1px 1px rgba(0, 0, 0, 0.316);  
@@ -161,7 +169,7 @@
                         <a href="./bs5ranking.html" class="nav-link ">世界排名</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./calendar.html" class="nav-link ">賽事</a>
+                        <a href="./calendar_new.html" class="nav-link ">賽事</a>
                     </li>
                     <li class="nav-item">
                         <a href="./tool.html" class="nav-link ">記分板</a>
@@ -213,28 +221,28 @@
         <br>
         <div class="container-md">
             <div class="row w-100 py-auto">
-                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mx-auto">
                     <div><img class="w-100" src="./img/newspicture1.jpg" alt=""></div>
                     <div>
                         <p class="bg-dark p-3 w-100"><a href="">China
                                 Open: Goh/Lai Cherish ‘New Them’</a></p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mx-auto">
                     <div><img class="w-100" src="./img/newspicture2.jpg" alt=""></div>
                     <div>
                         <p class="bg-dark p-3 w-100"><a href="">China
                                 Open: Goh/Lai Cherish ‘New Them’</a></p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mx-auto">
                     <div><img class="w-100" src="./img/newspicture3.jpg" alt=""></div>
                     <div>
                         <p class="bg-dark p-3 w-100"><a href="">China
                                 Open: Goh/Lai Cherish ‘New Them’</a></p>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12 mx-auto">
                     <div><img class="w-100" src="./img/newspicture4.jpg" alt=""></div>
                     <div>
                         <p class="bg-dark p-3 w-100"><a href="">China
@@ -253,7 +261,7 @@
                     <h2>下個賽事</h2>
                 </div>
                 <div class="col-6 text-end">
-                    <a class="text-danger" href="">
+                    <a class="text-danger" href="./calendar_new.html">
                         <h2>更多賽事</h2>
                     </a>
                 </div>
@@ -316,19 +324,19 @@
                     </div>
                     <div class="col-8 ">
                         <div class="row pt-3">
-                            <div class="col-2">
+                            <div class="col-sm-2 col-12 d-flex align-items-center">
                                 <img src="./img/CHN.png" alt="China" style=" border:1px solid black;">
 
                             </div>
                             <div
-                                class="col-lg-5 col-10 d-flex align-items-center justify-content-center justify-content-lg-center">
-                                <h2 class="m-0">SHI Yu Qi</h2>
+                                class="col-lg-5 col-sm-10 col-12 d-flex align-items-sm-center justify-content-start  justify-content-sm-center">
+                                <h2 class="m-0 text-start">SHI Yu Qi</h2>
                             </div>
                             <div class="col-lg-5  justify-content-end d-none d-lg-flex"><button
                                     style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
                                     FULL BWF PROFILE</button></div>
                         </div>
-                        <div class="row">
+                        <div class="row profile">
                             <div style="background-color: rgb(223, 32, 39);;" class="col-6 text-center ">
                                 <br>
                                 <p>World Ranking</p>
@@ -336,14 +344,14 @@
                                 <p>MEN'S SINGLE</p>
 
                             </div>
-                            <div class="col-6  bg-light text-danger text-center">
+                            <div class="col-6 profile  bg-light text-danger text-center">
                                 <br>
                                 <p>Point</p>
                                 <strong>104815</strong>
                                 <p>MEN'S SINGLE</p>
                             </div>
                         </div>
-                        <div class="row d-md-flex d-none">
+                        <div class="row d-md-flex d-none profile">
                             <div class="col-4 text-center ">
                                 <br>
                                 WIN RATE(%)
@@ -372,19 +380,19 @@
                     </div>
                     <div class="col-8 ">
                         <div class="row pt-3">
-                            <div class="col-2">
-                                <img src="./img/korea.png" alt="KOREA" style=" border:1px solid black;">
+                            <div class="col-sm-2 col-12 d-flex align-items-center">
+                                <img src="./img/korea.png" alt="korea" style=" border:1px solid black;">
 
                             </div>
                             <div
-                                class="col-lg-5 col-10 d-flex align-items-center justify-content-center justify-content-lg-center">
-                                <h2 class="m-0">AN SE YOUNG</h2>
+                                class="col-lg-5 col-sm-10 col-12 d-flex align-items-sm-center justify-content-start  justify-content-sm-center">
+                                <h2 class="m-0 text-start">An Se Young</h2>
                             </div>
                             <div class="col-lg-5  justify-content-end d-none d-lg-flex"><button
                                     style="color:white; padding:10px; background-color: rgb(223, 32, 39);">
                                     FULL BWF PROFILE</button></div>
                         </div>
-                        <div class="row">
+                        <div class="row profile">
                             <div style="background-color: rgb(223, 32, 39);" class="col-6 text-center ">
                                 <br>
                                 <p>World Ranking</p>
@@ -392,14 +400,14 @@
                                 <p>WOMEN'S SINGLE</p>
 
                             </div>
-                            <div class="col-6  bg-light text-danger text-center">
+                            <div class="col-6  bg-light text-danger text-center ">
                                 <br>
                                 <p>Point</p>
                                 <strong>111867</strong>
                                 <p>WOMEN'S SINGLE</p>
                             </div>
                         </div>
-                        <div class="row d-md-flex d-none">
+                        <div class="row d-md-flex d-none profile">
                             <div class="col-4 text-center ">
                                 <br>
                                 WIN RATE(%)

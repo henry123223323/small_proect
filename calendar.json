@@ -1,0 +1,57 @@
+[
+    {
+        "sponsor": "PETRONAS",
+        "price": "PRIZE MONEY USD $1,450,000",
+        "name": "Malaysia Open 2025",
+        "level": "https://extranet.bwf.sport/docs/tmt-category/WT_1000.svg",
+        "image": "https://extranet.bwf.sport/docs/events/5200/logo-colour/Malaysia-Open-2025.png",
+        "country_img": "https://extranet.bwf.sport/docs/flags/malaysia.png",
+        "date": "07 - 12 JANUARY",
+        "country": "Malaysia",
+        "city": "Kuala Lumpur"
+    },
+    {
+        "sponsor": "YONEX-SUNRISE",
+        "price": "PRIZE MONEY USD $950,000",
+        "name": " India Open 2025",
+        "level": "https://extranet.bwf.sport/docs/tmt-category/WT_750.svg",
+        "image": "https://extranet.bwf.sport/docs/events/5246/logo-colour/India-Open-2024.svg",
+        "country_img": "https://extranet.bwf.sport/docs/flags/india.png",
+        "date": "14 - 19 JANUARY",
+        "country": "India",
+        "city": "New Delhi"
+    },
+    {
+        "sponsor": "DAIHATSU",
+        "price": "PRIZE MONEY USD $475,000",
+        "name": "Indonesia Masters 2025",
+        "level": "https://extranet.bwf.sport/docs/tmt-category/WT_500.svg",
+        "image": "https://extranet.bwf.sport/docs/events/5212/logo-colour/Indonesia%20Masters-2025.svg",
+        "country_img": "https://extranet.bwf.sport/docs/flags/indonesia.png",
+        "date": "21 - 26 JANUARY",
+        "country": "Indonesia",
+        "city": "Jakarta"
+    },
+    {
+        "sponsor": "PRINCESS SIRIVANNAVARI",
+        "price": "PRIZE MONEY USD $240,000",
+        "name": " Thailand Masters 2025",
+        "level": "https://extranet.bwf.sport/docs/tmt-category/WT_300.svg",
+        "image": "https://extranet.bwf.sport/docs/events/5199/logo-colour/Thailand%20Masters-2025.svg",
+        "country_img": "https://extranet.bwf.sport/docs/flags/thailand.png",
+        "date": "28 JANUARY - 02 FEBRUARY",
+        "country": "Thailand",
+        "city": "Patumwan"
+    },
+    {
+        "sponsor": "YONEX",
+        "price": "PRIZE MONEY USD $240,000",
+        "name": " German Masters 2025",
+        "level": "https://extranet.bwf.sport/docs/tmt-category/WT_300.svg",
+        "image": "https://extranet.bwf.sport/docs/events/5220/logo-colour/German-Open-2025.png",
+        "country_img": "https://extranet.bwf.sport/docs/flags/germany.png",
+        "date": "25 FEBRUARY - 02 MARCH",
+        "country": "Germany",
+        "city": "Mülheim an der Ruhr"
+    }
+]
