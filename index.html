@@ -269,25 +269,8 @@
             </div>
         </div>
         <div class="container-fluid w-100 backgroundbadminton d-flex align-items-center" style="height: 500px; ">
-            <div class="row w-100">
-                <div class="col-12 col-md-8 d-flex align-items-center">
-                    <div class="row w-100">
-                        <div class="col-6 d-flex justify-content-center align-items-center">
-                            <img class="w-50" src="./img/India-Open-2024.svg" alt="">
-                        </div>
-                        <div class="col-6 text-light d-flex flex-column justify-content-center align-items-start">
-                            <a href="./賽事結果website/indiaopen.html">
-                                <h1>YONEX-SUNRISE India Open 2025</h1>
-                            </a>
-                            <h3>14 - 19 January, India</h3>
-                            New Delhi <br><br>
-                            PRIZE MONEY USD $950,000
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4  justify-content-center align-items-center d-none d-md-flex">
-                    <img class="text-end" src="./img/WT_750.svg" alt="">
-                </div>
+            <div class="row w-100" id="next">
+
             </div>
         </div>
 
@@ -707,6 +690,32 @@
     </section>
 
     <script>
+        fetch('./calendar.json')
+            .then(response => response.json())
+            .then(json => {
+                let html = ""
+                html += `
+                <div class="col-12 col-md-8 d-flex align-items-center">
+                    <div class="row w-100">
+                        <div class="col-6 d-flex justify-content-center align-items-center">
+                            <img class="w-50" src="${json[4].image}" alt="">
+                        </div>
+                        <div class="col-6 text-light d-flex flex-column justify-content-center align-items-start">
+                            <a href="#">
+                                <h1>${json[4].sponsor}${json[4].name}</h1>
+                            </a>
+                            <h3>${json[4].date},${json[4].country}</h3>
+                            ${json[4].city}<br><br>
+                            ${json[4].price}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4  justify-content-center align-items-center d-none d-md-flex">
+                    <img class="text-end" src="${json[4].level}" alt="">
+                </div>
+            `
+                next.innerHTML = html
+            })
         function openPage(pageName, elmnt, color) {
             // Hide all elements with class="tabcontent" by default */
             var i, tabcontent, tablinks;
